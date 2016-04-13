@@ -142,6 +142,17 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-table"></i>
+						 <span class="hidden-xs">Consumo</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo CController::createUrl('invmat/admin'); ?>">Consumo de Materiales</a></li>
+						<li><a href="<?php echo CController::createUrl('invReact/admin'); ?>">Consumo de Reactivos</a></li>
+						
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-table"></i>
 						 <span class="hidden-xs">Inventario</span>
 					</a>
 					<ul class="dropdown-menu">
