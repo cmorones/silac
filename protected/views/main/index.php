@@ -110,7 +110,7 @@
 
 					<?php
 
-						$valores[0] = "Abatelenguas de madera";
+						$valores[0] = "Cesar Morones";
 						$valores[1] = "Acetatos tamaño carta";
 						$valores[2] = "Adaptador de neopreno para embudo büchner";
 						$valores[3] = "Afilador para horadador";
