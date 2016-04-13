@@ -1,0 +1,889 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"is",
+				"isset"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"ch",
+				"charset"
+			],
+			[
+				"em",
+				"empty"
+			],
+			[
+				"ar",
+				"arg_list"
+			],
+			[
+				"var",
+				"var_dump"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n	<head>\n		<meta charset=\"utf-8\">\n		<title>SILAC</title>\n		<meta name=\"description\" content=\"description\">\n		<meta name=\"author\" content=\"IEMS\">\n		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n		<link href=\"http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">\n		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>\n		\n		\n		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->\n		<!--[if lt IE 9]>\n				<script src=\"http://getbootstrap.com/docs-assets/js/html5shiv.js\"></script>\n				<script src=\"http://getbootstrap.com/docs-assets/js/respond.min.js\"></script>\n		<![endif]-->\n\n		  <?php\n        error_reporting(0);\n        $baseUrl = Yii::app()->request->baseUrl; \n        $cs = Yii::app()->getClientScript();\n        //Yii::app()->clientScript->registerCoreScript('jquery');\n        $cs->registerCssFile($baseUrl.'/plugins/bootstrap/bootstrap.css');\n        $cs->registerCssFile($baseUrl.'/plugins/jquery-ui/jquery-ui.min.css');\n        $cs->registerCssFile($baseUrl.'/plugins/jquery-ui/jquery-ui.min.css');\n        $cs->registerCssFile($baseUrl.'/plugins/fancybox/jquery.fancybox.css');\n        $cs->registerCssFile($baseUrl.'/plugins/fullcalendar/fullcalendar.css');\n        $cs->registerCssFile($baseUrl.'/plugins/select2/select2.css');\n        $cs->registerCssFile($baseUrl.'/plugins/xcharts/xcharts.css');\n        $cs->registerCssFile($baseUrl.'/plugins/justified-gallery/justifiedGallery.css');\n        $cs->registerCssFile($baseUrl.'/css/style_v2.css');\n        $cs->registerCssFile($baseUrl.'/plugins/chartist/chartist.min.css');\n        \n       ?>\n	</head>\n<body>\n<!--Start Header-->\n<div id=\"screensaver\">\n	<canvas id=\"canvas\"></canvas>\n	<i class=\"fa fa-lock\" id=\"screen_unlock\"></i>\n</div>\n<div id=\"modalbox\">\n	<div class=\"devoops-modal\">\n		<div class=\"devoops-modal-header\">\n			<div class=\"modal-header-name\">\n				<span>Basic table</span>\n			</div>\n			<div class=\"box-icons\">\n				<a class=\"close-link\">\n					<i class=\"fa fa-times\"></i>\n				</a>\n			</div>\n		</div>\n		<div class=\"devoops-modal-inner\">\n		</div>\n		<div class=\"devoops-modal-bottom\">\n		</div>\n	</div>\n</div>\n<header class=\"navbar\">\n	<div class=\"container-fluid expanded-panel\">\n		<div class=\"row\">\n			<div id=\"logo\" class=\"col-xs-12 col-sm-2\">\n				<a href=\"index.html\">IEMS</a>\n			</div>\n			<div id=\"top-panel\" class=\"col-xs-12 col-sm-10\">\n				<div class=\"row\">\n					<div class=\"col-xs-8 col-sm-4\">\n						<span class='badge'>Sistema Institucional de laboratorios</span>\n					</div>\n					<div class=\"col-xs-4 col-sm-8 top-panel-right\">\n						<ul class=\"nav navbar-nav pull-right panel-menu\">\n							\n							<li class=\"dropdown\">\n								<a href=\"#\" class=\"dropdown-toggle account\" data-toggle=\"dropdown\">\n									\n									<i class=\"fa fa-angle-down pull-right\"></i>\n									<div class=\"user-mini pull-right\">\n										<span class=\"welcome\">Bienvenido,</span>\n										<span>Administrador</span>\n									</div>\n								</a>\n								<ul class=\"dropdown-menu\">\n									<!--<li>\n										<a href=\"#\">\n											<i class=\"fa fa-user\"></i>\n											<span>Profile</span>\n										</a>\n									</li>\n									<li>\n										<a href=\"ajax/page_messages.html\" class=\"ajax-link\">\n											<i class=\"fa fa-envelope\"></i>\n											<span>Messages</span>\n										</a>\n									</li>\n									<li>\n										<a href=\"ajax/gallery_simple.html\" class=\"ajax-link\">\n											<i class=\"fa fa-picture-o\"></i>\n											<span>Albums</span>\n										</a>\n									</li>\n									<li>\n										<a href=\"ajax/calendar.html\" class=\"ajax-link\">\n											<i class=\"fa fa-tasks\"></i>\n											<span>Tasks</span>\n										</a>\n									</li>\n									<li>\n										<a href=\"#\">\n											<i class=\"fa fa-cog\"></i>\n											<span>Settings</span>\n										</a>\n									</li>-->\n									<li>\n										<a href=\"<?php echo CController::createUrl('site/logout'); ?>\">\n											<i class=\"fa fa-power-off\"></i>\n											<span>Logout</span>\n										</a>\n									</li>\n								</ul>\n							</li>\n						</ul>\n					</div>\n				</div>\n			</div>\n		</div>\n	</div>\n</header>\n<!--End Header-->\n<!--Start Container-->\n<div id=\"main\" class=\"container-fluid\">\n	<div class=\"row\">\n		<div id=\"sidebar-left\" class=\"col-xs-2 col-sm-2\">\n			<ul class=\"nav main-menu\">\n				<li>\n					<a href=\"<?php echo CController::createUrl('main/index'); ?>\" >\n						<i class=\"fa fa-dashboard\"></i>\n						<span class=\"hidden-xs\">Dashboard</span>\n					</a>\n				</li>\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-table\"></i>\n						 <span class=\"hidden-xs\">Inventario</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a href=\"<?php echo CController::createUrl('invmat/admin'); ?>\">Inventario de Materiales</a></li>\n						<li><a href=\"<?php echo CController::createUrl('invReact/admin'); ?>\">Inventario de Reactivos</a></li>\n						\n					</ul>\n				</li>\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-pencil-square-o\"></i>\n						 <span class=\"hidden-xs\">Administración</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a href=\"<?php echo CController::createUrl('catPlanteles/admin'); ?>\">Catalogo de Planteles</a></li>\n						<li><a href=\"<?php echo CController::createUrl('catMat/admin'); ?>\">Catalogo de Materiales</a></li>\n						<li><a href=\"<?php echo CController::createUrl('catReact/admin'); ?>\">Catalogo de Reactivos</a></li>\n						<li><a href=\"<?php echo CController::createUrl('catCatMat/admin'); ?>\">Categorias Materiales</a></li>\n						<li><a href=\"<?php echo CController::createUrl('catMedida/admin'); ?>\">Unidades de Medida</a></li>\n						\n					</ul>\n				</li>\n				 <li>\n					<a  href=\"<?php echo CController::createUrl('main/calendario'); ?>\">\n						 <i class=\"fa fa-calendar\"></i>\n						 <span class=\"hidden-xs\">Calendario</span>\n					</a>\n				 </li>\n				 <li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-list\"></i>\n						 <span class=\"hidden-xs\">Solicitudes</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a href=\"ajax/page_login.html\">Solicitud de Sesión</a></li>\n						<li><a href=\"ajax/page_register.html\">Solicitud de Materiales</a></li>\n						<li><a id=\"locked-screen\" class=\"submenu\" href=\"ajax/page_locked.html\">Solicitud de Tutoriales</a></li>\n						\n					</ul>\n				</li>\n\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-bar-chart-o\"></i>\n						<span class=\"hidden-xs\">Informes</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a href=\"<?php echo CController::createUrl('main/xcharts');?>\">xCharts</a></li>\n						<!--<li><a href=\"ajax/charts_flot.html\">Flot Charts</a></li>\n						<li><a href=\"ajax/charts_google.html\">Google Charts</a></li>\n						<li><a href=\"ajax/charts_morris.html\">Morris Charts</a></li>\n						<li><a href=\"ajax/charts_amcharts.html\">AmCharts</a></li>\n						<li><a href=\"ajax/charts_chartist.html\">Chartist</a></li>\n						<li><a href=\"ajax/charts_coindesk.html\">CoinDesk realtime</a></li> -->\n					</ul>\n				</li>\n				<!--<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-bar-chart-o\"></i>\n						<span class=\"hidden-xs\">Charts</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a class=\"ajax-link\" href=\"ajax/charts_xcharts.html\">xCharts</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/charts_flot.html\">Flot Charts</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/charts_google.html\">Google Charts</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/charts_morris.html\">Morris Charts</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/charts_amcharts.html\">AmCharts</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/charts_chartist.html\">Chartist</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/charts_coindesk.html\">CoinDesk realtime</a></li>\n					</ul>\n				</li>\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-table\"></i>\n						 <span class=\"hidden-xs\">Tables</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a class=\"ajax-link\" href=\"ajax/tables_simple.html\">Simple Tables</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/tables_datatables.html\">Data Tables</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/tables_beauty.html\">Beauty Tables</a></li>\n					</ul>\n				</li>\n				\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-desktop\"></i>\n						 <span class=\"hidden-xs\">UI Elements</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a class=\"ajax-link\" href=\"ajax/ui_grid.html\">Grid</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/ui_buttons.html\">Buttons</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/ui_progressbars.html\">Progress Bars</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/ui_jquery-ui.html\">Jquery UI</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/ui_icons.html\">Icons</a></li>\n					</ul>\n				</li>\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-list\"></i>\n						 <span class=\"hidden-xs\">Pages</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a href=\"ajax/page_login.html\">Login</a></li>\n						<li><a href=\"ajax/page_register.html\">Register</a></li>\n						<li><a id=\"locked-screen\" class=\"submenu\" href=\"ajax/page_locked.html\">Locked Screen</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/page_contacts.html\">Contacts</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/page_feed.html\">Feed</a></li>\n						<li><a class=\"ajax-link add-full\" href=\"ajax/page_messages.html\">Messages</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/page_pricing.html\">Pricing</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/page_product.html\">Product</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/page_invoice.html\">Invoice</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/page_search.html\">Search Results</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/page_404.html\">Error 404</a></li>\n						<li><a href=\"ajax/page_500.html\">Error 500</a></li>\n					</ul>\n				</li>\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-map-marker\"></i>\n						<span class=\"hidden-xs\">Maps</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a class=\"ajax-link\" href=\"ajax/maps.html\">OpenStreetMap</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/map_fullscreen.html\">Fullscreen map</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/map_leaflet.html\">Leaflet</a></li>\n					</ul>\n				</li>\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-picture-o\"></i>\n						 <span class=\"hidden-xs\">Gallery</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a class=\"ajax-link\" href=\"ajax/gallery_simple.html\">Simple Gallery</a></li>\n						<li><a class=\"ajax-link\" href=\"ajax/gallery_flickr.html\">Flickr Gallery</a></li>\n					</ul>\n				</li>\n				<li>\n					 <a class=\"ajax-link\" href=\"ajax/typography.html\">\n						 <i class=\"fa fa-font\"></i>\n						 <span class=\"hidden-xs\">Typography</span>\n					</a>\n				</li>\n				\n				<li class=\"dropdown\">\n					<a href=\"#\" class=\"dropdown-toggle\">\n						<i class=\"fa fa-picture-o\"></i>\n						 <span class=\"hidden-xs\">Multilevel menu</span>\n					</a>\n					<ul class=\"dropdown-menu\">\n						<li><a href=\"#\">First level menu</a></li>\n						<li><a href=\"#\">First level menu</a></li>\n						<li class=\"dropdown\">\n							<a href=\"#\" class=\"dropdown-toggle\">\n								<i class=\"fa fa-plus-square\"></i>\n								<span class=\"hidden-xs\">Second level menu group</span>\n							</a>\n							<ul class=\"dropdown-menu\">\n								<li><a href=\"#\">Second level menu</a></li>\n								<li><a href=\"#\">Second level menu</a></li>\n								<li class=\"dropdown\">\n									<a href=\"#\" class=\"dropdown-toggle\">\n										<i class=\"fa fa-plus-square\"></i>\n										<span class=\"hidden-xs\">Three level menu group</span>\n									</a>\n									<ul class=\"dropdown-menu\">\n										<li><a href=\"#\">Three level menu</a></li>\n										<li><a href=\"#\">Three level menu</a></li>\n										<li class=\"dropdown\">\n											<a href=\"#\" class=\"dropdown-toggle\">\n												<i class=\"fa fa-plus-square\"></i>\n												<span class=\"hidden-xs\">Four level menu group</span>\n											</a>\n											<ul class=\"dropdown-menu\">\n												<li><a href=\"#\">Four level menu</a></li>\n												<li><a href=\"#\">Four level menu</a></li>\n												<li class=\"dropdown\">\n													<a href=\"#\" class=\"dropdown-toggle\">\n														<i class=\"fa fa-plus-square\"></i>\n														<span class=\"hidden-xs\">Five level menu group</span>\n													</a>\n													<ul class=\"dropdown-menu\">\n														<li><a href=\"#\">Five level menu</a></li>\n														<li><a href=\"#\">Five level menu</a></li>\n														<li class=\"dropdown\">\n															<a href=\"#\" class=\"dropdown-toggle\">\n																<i class=\"fa fa-plus-square\"></i>\n																<span class=\"hidden-xs\">Six level menu group</span>\n															</a>\n															<ul class=\"dropdown-menu\">\n																<li><a href=\"#\">Six level menu</a></li>\n																<li><a href=\"#\">Six level menu</a></li>\n															</ul>\n														</li>\n													</ul>\n												</li>\n											</ul>\n										</li>\n										<li><a href=\"#\">Three level menu</a></li>\n									</ul>\n								</li>\n							</ul>\n						</li>\n					</ul>\n				</li>-->\n			</ul>\n		</div>\n		<!--Start Content-->\n		<?php echo $content; ?> \n		<!--End Content-->\n	</div>\n</div>\n<!--End Container-->\n<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n\n<?php\n$cs->registerScriptFile($baseUrl.'/plugins/jquery/jquery.min.js');\n$cs->registerScriptFile($baseUrl.'/plugins/jquery-ui/jquery-ui.min.js');\n$cs->registerScriptFile($baseUrl.'/plugins/bootstrap/bootstrap.min.js');\n$cs->registerScriptFile($baseUrl.'/plugins/justified-gallery/jquery.justifiedGallery.min.js');\n$cs->registerScriptFile($baseUrl.'/plugins/tinymce/tinymce.min.js');\n$cs->registerScriptFile($baseUrl.'/plugins/xcharts/xcharts.js');\n$cs->registerScriptFile($baseUrl.'/js/devoops.js');\n$cs->registerScriptFile($baseUrl.'/js/lib/moment.min.js');\n$cs->registerScriptFile($baseUrl.'/js/lib/jquery.min.js');\n$cs->registerScriptFile($baseUrl.'/js/fullcalendar.min.js');\n $cs->registerScriptFile($baseUrl.'/js/lang/es.js');\n\n?>\n</body>\n</html>",
+			"file": "protected/views/layouts/main.php",
+			"file_size": 14425,
+			"file_write_time": 131049494290950210,
+			"settings":
+			{
+				"buffer_size": 14423,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Administracion</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Invetario de Reactivos</h4>\n\n<?php $this->widget('zii.widgets.grid.CGridView', array(\n	'id'=>'cat-planteles-grid',\n	'dataProvider'=>$model->search(),\n	'filter'=>$model,\n	'columns'=>array(\n		'id',\n		'nombre',\n	\n	),\n)); ?>\n\n</div>\n</div>\n</div>\n",
+			"file": "protected/views/catPlanteles/admin.php",
+			"file_size": 746,
+			"file_write_time": 131049494079629176,
+			"settings":
+			{
+				"buffer_size": 746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"index.html\">Home</a></li>\n			<li><a href=\"#\">Dashboard</a></li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n			<a href=\"#\"><i class=\"fa fa-google-plus\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-facebook\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-twitter\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-linkedin\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-youtube\"></i></a>\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<!--Start Dashboard 1-->\n<div id=\"dashboard-header\" class=\"row\">\n	<div class=\"col-xs-12 col-sm-4 col-md-5\">\n		<h3>Administración de laboratorios</h3>\n	</div>\n	<div class=\"clearfix visible-xs\"></div>\n	<div class=\"col-xs-12 col-sm-8 col-md-7 pull-right\">\n		<div class=\"row\">\n			<div class=\"col-xs-3\">\n				<div class=\"sparkline-dashboard\" id=\"sparkline-1\"></div>\n				<div class=\"sparkline-dashboard-info\">\n					756.45\n					<span class=\"txt-primary\">ENTRADAS MATERIALES</span>\n				</div>\n			</div>\n			<div class=\"col-xs-3\">\n				<div class=\"sparkline-dashboard\" id=\"sparkline-1\"></div>\n				<div class=\"sparkline-dashboard-info\">\n					756.45\n					<span class=\"txt-primary\">ENTRADAS REACTIVOS</span>\n				</div>\n			</div>\n			<div class=\"col-xs-3\">\n				<div class=\"sparkline-dashboard\" id=\"sparkline-2\"></div>\n				<div class=\"sparkline-dashboard-info\">\n					245.12\n					<span class=\"txt-info\">SALIDAS MATERIALES</span>\n				</div>\n			</div>\n			<div class=\"col-xs-3\">\n				<div class=\"sparkline-dashboard\" id=\"sparkline-3\"></div>\n				<div class=\"sparkline-dashboard-info\">\n					107.83\n					<span>SALIDAS REACTIVOS</span>\n				</div>\n			</div>\n		</div>\n	</div>\n</div>\n<!--End Dashboard 1-->\n<!--Start Dashboard 2-->\n<div class=\"row-fluid\">\n	<div id=\"dashboard_links\" class=\"col-xs-12 col-sm-2 pull-right\">\n		<ul class=\"nav nav-pills nav-stacked\">\n			<li class=\"active\"><a href=\"#\" class=\"tab-link\" id=\"overview\">Materiales</a></li>\n			<li><a href=\"#\" class=\"tab-link\" id=\"clients\">Reactivos</a></li>\n			<!--<li><a href=\"#\" class=\"tab-link\" id=\"graph\">Statistics</a></li>\n			<li><a href=\"#\" class=\"tab-link\" id=\"servers\">Servers</a></li>\n			<li><a href=\"#\" class=\"tab-link\" id=\"planning\">Planning</a></li>\n			<li><a href=\"#\" class=\"tab-link\" id=\"netmap\">Network map</a></li>\n			<li><a href=\"#\" class=\"tab-link\" id=\"stock\">Yahoo finance</a></li>-->\n		</ul>\n	</div>\n	<div id=\"dashboard_tabs\" class=\"col-xs-12 col-sm-10\">\n		<!--Start Dashboard Tab 1-->\n		<div id=\"dashboard-overview\" class=\"row\" style=\"visibility: visible; position: relative;\">\n			<div id=\"ow-marketplace\" class=\"col-sm-12 col-md-12\">\n				\n				<h4 class=\"page-header\">Inventario de materiales y equipo de laboratorio por plantel</h4>\n				<table id=\"ticker-table\" class=\"table m-table table-bordered table-hover table-heading\">\n					<thead>\n						<tr>\n							<th>No.</th>\n							<th>Descripcion</th>\n							<th>Medida</th>\n							<th>1</th>\n							<th>2</th>\n							<th>3</th>\n							<th>4</th>\n							<th>5</th>\n							<th>6</th>\n							<th>7</th>\n							<th>8</th>\n							<th>9</th>\n							<th>10</th>\n							<th>11</th>\n							<th>12</th>\n							<th>13</th>\n							<th>14</th>\n							<th>15</th>\n							<th>16</th>\n							<th>17</th>\n							<th>18</th>\n							<th>19</th>\n							<th>20</th>\n							<th>Total</th>\n						</tr>\n					</thead>\n					<tbody>\n\n					<?php\n\n						$valores[0] = \"Abatelenguas de madera\";\n						$valores[1] = \"Acetatos tamaño carta\";\n						$valores[2] = \"Adaptador de neopreno para embudo büchner\";\n						$valores[3] = \"Afilador para horadador\";\n						$valores[4] = \"Agitador de vidrio puntas redondeadas\";\n						$valores[5] = \"Aguja de caneva recta metálica\";\n						$valores[6] = \"Agujas de disección en forma curva\";\n						$valores[7] = \"Agujas de disección en forma recta\";\n						$valores[8] = \"Alambre de cobre calibre 20\";\n						$valores[9] = \"Alambre de nicromel  calibre 24\";\n						$valores[10] = \"Alambre de nicromel  calibre 28\";\n						$valores[11] = \"Alambre de nicromel  calibre 32\";\n						$valores[12] = \"Alambre magneto  calibre 22\";\n						$valores[13] = \"Alambre magneto  calibre 24\";\n						$valores[14] = \"Alambre magneto  calibre 26\";\n						$valores[15] = \"Alambre magneto  calibre 28\";\n						$valores[16] = \"Algodón de uso clínico\";\n						$valores[17] = \"Aluminio en barra de aproximadamente 15 x 2.5 x 0.6 cm \";\n						$valores[18] = \"Abatelenguas\";\n						$valores[19] = \"Abatelenguas\";\n						$valores[20] = \"Abatelenguas\";\n						$valores[21] = \"Abatelenguas\";\n						$valores[22] = \"Abatelenguas\";\n						$valores[23] = \"Abatelenguas\";\n						$valores[24] = \"Abatelenguas\";\n						$valores[25] = \"Abatelenguas\";\n						$valores[26] = \"Abatelenguas\";\n						$valores[27] = \"Abatelenguas\";\n						$valores[28] = \"Abatelenguas\";\n						$valores[29] = \"Abatelenguas\";\n						$valores[30] = \"Abatelenguas\";\n						$valores[31] = \"Abatelenguas\";\n						$valores[32] = \"Abatelenguas\";\n						$valores[33] = \"Abatelenguas\";\n						$valores[34] = \"Abatelenguas\";\n						$valores[34] = \"Abatelenguas\";\n						$valores[35] = \"Abatelenguas\";\n						$valores[36] = \"Abatelenguas\";\n						$valores[37] = \"Abatelenguas\";\n						$valores[38] = \"Abatelenguas\";\n						$valores[39] = \"Abatelenguas\";\n						$valores[40] = \"Abatelenguas\";\n						$valores[41] = \"Abatelenguas\";\n						$valores[42] = \"Abatelenguas\";\n						$valores[43] = \"Abatelenguas\";\n						$valores[44] = \"Abatelenguas\";\n						$valores[45] = \"Abatelenguas\";\n						$valores[46] = \"Abatelenguas\";\n						$valores[47] = \"Abatelenguas\";\n						$valores[48] = \"Abatelenguas\";\n						$valores[49] = \"Abatelenguas\";\n						$valores[50] = \"Abatelenguas\";\n						$valores[51] = \"Abatelenguas\";\n						for ($i=0; $i < 15; $i++) { \n							# code...\n						\n					?>\n						<tr>\n							<td class=\"m-ticker\"><b>1</b></td>\n							<td class=\"m-price\"><span><?=$valores[$i]?>\n</span></td>\n							<td class=\"m-change\"><i class=\"fa fa-angle-up\"></i> pieza</td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1000, 2000)?></td>\n						</tr>\n\n						<?php\n							}\n						?>\n						\n					</tbody>\n				</table>\n			</div>\n\n\n\n			<div class=\"col-xs-12 col-md-12\">\n				<div id=\"ow-donut\" class=\"row\">\n					<div class=\"col-xs-12\">\n						<div id=\"morris_donut_1\" style=\"width:120px;height:120px;\"></div>\n					</div>\n					<div class=\"col-xs-6\">\n						<div id=\"morris_donut_2\" style=\"width:120px;height:120px;\"></div>\n					</div>\n					<div class=\"col-xs-6\">\n						<div id=\"morris_donut_3\" style=\"width:120px;height:120px;\"></div>\n					</div>\n				</div>\n			\n			\n			</div>\n		</div>\n		<!--End Dashboard Tab 1-->\n		<!--Start Dashboard Tab 2-->\n		<div id=\"dashboard-clients\" class=\"row\" style=\"visibility: hidden; position: absolute;\">\n			<div id=\"ow-marketplace\" class=\"col-sm-12 col-md-12\">\n			<h4 class=\"page-header\">Inventario de Reactivos y equipo de laboratorio por plantel</h4>\n			<table id=\"ticker-table\" class=\"table m-table table-bordered table-hover table-heading\">\n					<thead>\n						<tr>\n							<th>No.</th>\n							<th>Descripcion</th>\n							<th>Medida</th>\n							<th>1</th>\n							<th>2</th>\n							<th>3</th>\n							<th>4</th>\n							<th>5</th>\n							<th>6</th>\n							<th>7</th>\n							<th>8</th>\n							<th>9</th>\n							<th>10</th>\n							<th>11</th>\n							<th>12</th>\n							<th>13</th>\n							<th>14</th>\n							<th>15</th>\n							<th>16</th>\n							<th>17</th>\n							<th>18</th>\n							<th>19</th>\n							<th>20</th>\n							<th>Total</th>\n						</tr>\n					</thead>\n					<tbody>\n\n					<?php\n\n						$valores[0] = \"Aceite de cocina\";\n						$valores[1] = \"Aceite de almendras, de linaza, de pino, etc.\";\n						$valores[2] = \"Abatelenguasces\";\n						$valores[3] = \"Abatelenguas\";\n						$valores[4] = \"Abatelenguas\";\n						$valores[5] = \"Abatelenguas\";\n						$valores[6] = \"Abatelenguas\";\n						$valores[7] = \"Abatelenguas\";\n						$valores[8] = \"Abatelenguas\";\n						$valores[9] = \"Abatelenguas\";\n						$valores[10] = \"Abatelenguas\";\n						$valores[11] = \"Abatelenguas\";\n						$valores[12] = \"Abatelenguas\";\n						$valores[13] = \"Abatelenguas\";\n						$valores[14] = \"Abatelenguas\";\n						$valores[15] = \"Abatelenguas\";\n						$valores[16] = \"Abatelenguas\";\n						$valores[17] = \"Abatelenguas\";\n						$valores[18] = \"Abatelenguas\";\n						$valores[19] = \"Abatelenguas\";\n						$valores[20] = \"Abatelenguas\";\n						$valores[21] = \"Abatelenguas\";\n						$valores[22] = \"Abatelenguas\";\n						$valores[23] = \"Abatelenguas\";\n						$valores[24] = \"Abatelenguas\";\n						$valores[25] = \"Abatelenguas\";\n						$valores[26] = \"Abatelenguas\";\n						$valores[27] = \"Abatelenguas\";\n						$valores[28] = \"Abatelenguas\";\n						$valores[29] = \"Abatelenguas\";\n						$valores[30] = \"Abatelenguas\";\n						$valores[31] = \"Abatelenguas\";\n						$valores[32] = \"Abatelenguas\";\n						$valores[33] = \"Abatelenguas\";\n						$valores[34] = \"Abatelenguas\";\n						$valores[34] = \"Abatelenguas\";\n						$valores[35] = \"Abatelenguas\";\n						$valores[36] = \"Abatelenguas\";\n						$valores[37] = \"Abatelenguas\";\n						$valores[38] = \"Abatelenguas\";\n						$valores[39] = \"Abatelenguas\";\n						$valores[40] = \"Abatelenguas\";\n						$valores[41] = \"Abatelenguas\";\n						$valores[42] = \"Abatelenguas\";\n						$valores[43] = \"Abatelenguas\";\n						$valores[44] = \"Abatelenguas\";\n						$valores[45] = \"Abatelenguas\";\n						$valores[46] = \"Abatelenguas\";\n						$valores[47] = \"Abatelenguas\";\n						$valores[48] = \"Abatelenguas\";\n						$valores[49] = \"Abatelenguas\";\n						$valores[50] = \"Abatelenguas\";\n						$valores[51] = \"Abatelenguas\";\n						for ($i=0; $i < 15; $i++) { \n							# code...\n						\n					?>\n						<tr>\n							<td class=\"m-ticker\"><b>1</b></td>\n							<td class=\"m-price\"><span><?=$valores[$i]?>\n</span></td>\n							<td class=\"m-change\"><i class=\"fa fa-angle-up\"></i> pieza</td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1, 100)?></td>\n							<td class=\"td-graph\"><?=rand(1000, 2000)?></td>\n						</tr>\n\n						<?php\n							}\n						?>\n						\n					</tbody>\n				</table>\n		</div>\n		</div>\n		<!--End Dashboard Tab 2-->\n		<!--Start Dashboard Tab 3-->\n		<div id=\"dashboard-graph\" class=\"row\" style=\"width:100%; visibility: hidden; position: absolute;\" >\n			<div class=\"col-xs-12\">\n				<h4 class=\"page-header\">OS Platform Statistics</h4>\n				<div id=\"stat-graph\" style=\"height: 300px;\"></div>\n			</div>\n		</div>\n		<!--End Dashboard Tab 3-->\n		<!--Start Dashboard Tab 4-->\n		<div id=\"dashboard-servers\" class=\"row\" style=\"visibility: hidden; position: absolute;\">\n			<div class=\"col-xs-12 col-sm-6 col-md-4 ow-server\">\n				<h4 class=\"page-header text-right\"><i class=\"fa fa-windows\"></i>#SRV-APP</h4>\n				<small>Application server</small>\n				<div class=\"ow-settings\">\n					<a href=\"#\"><i class=\"fa fa-gears\"></i></a>\n				</div>\n				<div class=\"row ow-server-bottom\">\n					<div class=\"col-sm-4\">\n						<div class=\"knob-slider\">\n							<input id=\"knob-srv-1\" class=\"knob\" data-width=\"60\"  data-height=\"60\" data-angleOffset=\"180\" data-fgColor=\"#6AA6D6\" data-skin=\"tron\" data-thickness=\".2\" value=\"\">CPU Load\n						</div>\n					</div>\n					<div class=\"col-sm-8\">\n						<div class=\"row\"><i class=\"fa fa-windows\"></i> Windows 2008</div>\n						<div class=\"row\"><i class=\"fa fa-user\"></i> Active users - 49</div>\n						<div class=\"row\"><i class=\"fa fa-bolt\"></i> Uptime - 10 days</div>\n					</div>\n				</div>\n			</div>\n			<div class=\"col-xs-12 col-sm-6 col-md-4 ow-server\">\n				<h4 class=\"page-header text-right\"><i class=\"fa fa-windows\"></i>#DB-MASTER</h4>\n				<small>SQL server</small>\n				<div class=\"ow-settings\">\n					<a href=\"#\"><i class=\"fa fa-gears\"></i></a>\n				</div>\n				<div class=\"row ow-server-bottom\">\n					<div class=\"col-sm-4\">\n						<div class=\"knob-slider\">\n							<input id=\"knob-srv-2\" class=\"knob\" data-width=\"60\"  data-height=\"60\" data-angleOffset=\"180\" data-fgColor=\"#6AA6D6\" data-skin=\"tron\" data-thickness=\".2\" value=\"\">CPU Load\n						</div>\n					</div>\n					<div class=\"col-sm-8\">\n						<div class=\"row\"><i class=\"fa fa-windows\"></i> Windows 2013</div>\n						<div class=\"row\"><i class=\"fa fa-user\"></i> Active users - 39</div>\n						<div class=\"row\"><i class=\"fa fa-bolt\"></i> Uptime - 2 month 1 day</div>\n					</div>\n				</div>\n			</div>\n			<div class=\"col-xs-12 col-sm-6 col-md-4 ow-server\">\n				<h4 class=\"page-header text-right\"><i class=\"fa fa-linux\"></i>#DB-WEB</h4>\n				<small>MySQL server</small>\n				<div class=\"ow-settings\">\n					<a href=\"#\"><i class=\"fa fa-gears\"></i></a>\n				</div>\n				<div class=\"row ow-server-bottom\">\n					<div class=\"col-sm-4\">\n						<div class=\"knob-slider\">\n							<input id=\"knob-srv-3\" class=\"knob\" data-width=\"60\"  data-height=\"60\" data-angleOffset=\"180\" data-fgColor=\"#6AA6D6\" data-skin=\"tron\" data-thickness=\".2\" value=\"\">CPU Load\n						</div>\n					</div>\n					<div class=\"col-sm-8\">\n						<div class=\"row\"><i class=\"fa fa-linux\"></i> CentOS 6.5</div>\n						<div class=\"row\"><i class=\"fa fa-user\"></i> Active users - 298</div>\n						<div class=\"row\"><i class=\"fa fa-bolt\"></i> Uptime - 9 month 17 day</div>\n					</div>\n				</div>\n			</div>\n			<div class=\"col-xs-12 col-sm-6 col-md-4 ow-server\">\n				<h4 class=\"page-header text-right\"><i class=\"fa fa-linux\"></i>#WWW-SRV</h4>\n				<small>Web-server</small>\n				<div class=\"ow-settings\">\n					<a href=\"#\"><i class=\"fa fa-gears\"></i></a>\n				</div>\n				<div class=\"row ow-server-bottom\">\n					<div class=\"col-sm-4\">\n						<div class=\"knob-slider\">\n							<input id=\"knob-srv-4\" class=\"knob\" data-width=\"60\"  data-height=\"60\" data-angleOffset=\"180\" data-fgColor=\"#6AA6D6\" data-skin=\"tron\" data-thickness=\".2\" value=\"\">CPU Load\n						</div>\n					</div>\n					<div class=\"col-sm-8\">\n						<div class=\"row\"><i class=\"fa fa-linux\"></i> Centos 6.5</div>\n						<div class=\"row\"><i class=\"fa fa-user\"></i> Active users - 1989</div>\n						<div class=\"row\"><i class=\"fa fa-bolt\"></i> Uptime - 2 years 3 month</div>\n					</div>\n				</div>\n			</div>\n			<div class=\"col-xs-12 col-sm-6 col-md-4 ow-server\">\n				<h4 class=\"page-header text-right\"><i class=\"fa fa-linux\"></i>#PHONE-OFFICE</h4>\n				<small>Asterisk</small>\n				<div class=\"ow-settings\">\n					<a href=\"#\"><i class=\"fa fa-gears\"></i></a>\n				</div>\n				<div class=\"row ow-server-bottom\">\n					<div class=\"col-sm-4\">\n						<div class=\"knob-slider\">\n							<input id=\"knob-srv-5\" class=\"knob\" data-width=\"60\"  data-height=\"60\" data-angleOffset=\"180\" data-fgColor=\"#6AA6D6\" data-skin=\"tron\" data-thickness=\".2\" value=\"\">CPU Load\n						</div>\n					</div>\n					<div class=\"col-sm-8\">\n						<div class=\"row\"><i class=\"fa fa-linux\"></i> Debian 6.4</div>\n						<div class=\"row\"><i class=\"fa fa-phone\"></i> Active calls - 86</div>\n						<div class=\"row\"><i class=\"fa fa-bolt\"></i> Uptime - 3 month 19 day</div>\n					</div>\n				</div>\n			</div>\n			<div class=\"col-xs-12 col-sm-6 col-md-4 ow-server\">\n				<h4 class=\"page-header text-right\"><i class=\"fa fa-linux\"></i>#DEVEL</h4>\n				<small>DEV server</small>\n				<div class=\"ow-settings\">\n					<a href=\"#\"><i class=\"fa fa-gears\"></i></a>\n				</div>\n				<div class=\"row ow-server-bottom\">\n					<div class=\"col-sm-4\">\n						<div class=\"knob-slider\">\n							<input id=\"knob-srv-6\" class=\"knob\" data-width=\"60\"  data-height=\"60\" data-angleOffset=\"180\" data-fgColor=\"#6AA6D6\" data-skin=\"tron\" data-thickness=\".2\" value=\"\">CPU Load\n						</div>\n					</div>\n					<div class=\"col-sm-8\">\n						<div class=\"row\"><i class=\"fa fa-linux\"></i> CentOS 6.5</div>\n						<div class=\"row\"><i class=\"fa fa-archive\"></i> Repositories - 17</div>\n						<div class=\"row\"><i class=\"fa fa-bolt\"></i> Uptime - 4 month 21 day</div>\n					</div>\n				</div>\n			</div>\n			<div class=\"clearfix\"></div>\n			<div id=\"ow-server-footer\">\n				<a href=\"#\" class=\"col-xs-4 col-sm-2 btn-default text-center\"><i class=\"fa fa-sun-o\"></i> <b>287</b> <span>Hosts</span></a>\n				<a href=\"#\" class=\"col-xs-4 col-sm-2 btn-default text-center\"><i class=\"fa fa-envelope-o\"></i> <b>56</b> <span>Messages</span></a>\n				<a href=\"#\" class=\"col-xs-4 col-sm-2 btn-default text-center\"><i class=\"fa fa-desktop\"></i> <b>85</b> <span>Stations</span></a>\n				<a href=\"#\" class=\"col-xs-4 col-sm-2 btn-default text-center\"><i class=\"fa fa-info-circle\"></i> <b>33</b> <span>Errors</span></a>\n				<a href=\"#\" class=\"col-xs-4 col-sm-2 btn-default text-center\"><i class=\"fa fa-comments-o\"></i> <b>1386</b> <span>Comments</span></a>\n				<a href=\"#\" class=\"col-xs-4 col-sm-2 btn-default text-center\"><i class=\"fa fa-user\"></i> <b>19985</b> <span>Clients</span></a>\n			</div>\n		</div>\n		<!--End Dashboard Tab 4-->\n		<!--Start Dashboard Tab 5-->\n		<div id=\"dashboard-planning\" class=\"row\" style=\"visibility: hidden; position: absolute;\">\n				<div class=\"col-xs-12 col-sm-6\">\n					<h4 class=\"page-header\">Planned projects</h4>\n					<a href=\"#\">Expense items</a><a href=\"#\" class=\"pull-right\">Project members</a>\n					<table class=\"table m-table table-bordered table-hover table-heading\">\n						<thead>\n							<tr>\n								<th>Projects</th>\n								<th>Ending date</th>\n								<th>Cost</th>\n							</tr>\n						</thead>\n						<tbody>\n							<tr>\n								<td class=\"m-ticker\"><b>Network upgrade</b><span>Change Dlink devices to Cisco</span></td>\n								<td class=\"m-price\">Aug</td>\n								<td class=\"m-change\">179459</td>\n							</tr>\n							<tr>\n								<td class=\"m-ticker\"><b>Improved power equipment</b><span>Nevada datacenter</span></td>\n								<td class=\"m-price\">Nov</td>\n								<td class=\"m-change\">59411</td>\n							</tr>\n							<tr>\n								<td class=\"m-ticker\"><b>New ticket system</b><span>developed from scratch</span></td>\n								<td class=\"m-price\">Jul</td>\n								<td class=\"m-change\">14906</td>\n							</tr>\n							<tr>\n								<td class=\"m-ticker\"><b>Storage Area Network</b><span>project</span></td>\n								<td class=\"m-price\">Nov</td>\n								<td class=\"m-change\">250000</td>\n							</tr>\n							<tr>\n								<td class=\"m-ticker\"><b>New optical channels</b><span>6 links</span></td>\n								<td class=\"m-price\">Nov</td>\n								<td class=\"m-change\">22359</td>\n							</tr>\n							<tr>\n								<td class=\"m-ticker\"><b>Load-balance system</b><span>based on Linux</span></td>\n								<td class=\"m-price\">Dec</td>\n								<td class=\"m-change\">33950</td>\n							</tr>\n						</tbody>\n					</table>\n				</div>\n				<div class=\"col-xs-12 col-sm-6\" id=\"planning-chart-1\" style=\"height:250px;\"><a href=\"#\">Reports</a></div>\n				<div class=\"col-xs-12 col-sm-8\" id=\"planning-chart-2\" style=\"height: 250px;\"></div>\n				<div class=\"col-xs-12 col-sm-4\" id=\"planning-chart-3\" style=\"height: 250px;\"></div>\n				<div class=\"col-xs-8\">\n					<h4 class=\"page-header\">Quarterly forecast</h4>\n					<div class=\"row\">\n						<div class=\"col-xs-3\"><span>Q1</span>123,34234</div>\n						<div class=\"col-xs-3\"><span>Q2</span>123,34234</div>\n						<div class=\"col-xs-3\"><span>Q3</span>123,34234</div>\n						<div class=\"col-xs-3\"><span>Q4</span>123,34234</div>\n					</div>\n				</div>\n				<div class=\"col-xs-4\">\n					<h4 class=\"page-header\">Total forecast</h4>\n					<div class=\"row\">\n						<div class=\"col-xs-12\"><span>QE</span>732423234.34</div>\n					</div>\n				</div>\n		</div>\n		<!--End Dashboard Tab 5-->\n		<!--Start Dashboard Tab 6-->\n		<div id=\"dashboard-netmap\" class=\"row\" style=\"visibility: hidden; position: absolute;\">\n			<div class=\"col-xs-12\">\n				<h4 class=\"page-header\">Network map(mesh topology)</h4>\n				<canvas id=\"springy-demo\" width=\"900\" height=\"480\" />\n			</div>\n		</div>\n		<!--End Dashboard Tab 6-->\n		<!--Start Dashboard Tab 7-->\n		<div id=\"dashboard-stock\" class=\"row\" style=\"visibility: hidden; position: absolute;\">\n			<div class=\"col-xs-12\">\n				<h4 class=\"page-header\">Stocks from Yahoo Finance</h4>\n				<div id=\"inputSymbol\">\n					<p>Enter Stock</p>\n					<input id=\"txtSymbol\" class=\"required\" Placeholder=\"Symbol\" />\n					<input id=\"startDate\" class=\"datePick required\" type=\"text\"  Placeholder=\"From\" />\n					<input id=\"endDate\" class=\"datePick\" type=\"text\" Placeholder=\"To\"  />\n					<button id=\"submit\">Submit</button>\n				</div>\n				<div class=\"realtime\" style=\"margin-top:40px;\">\n					<div class=\"col-xs-6\"><p>Name</p><span id=\"symbol\"></span></div>\n					<div class=\"col-xs-6\"><p>RealtimeBid</p><span id=\"bidRealtime\"></span></div>\n				</div>\n				<div class=\"historical\">\n					<div class=\"col-xs-6\"><p>Date</p><div id=\"date\"></div></div>\n					<div class=\"col-xs-6\"><p>Price</p><div id=\"closeValue\"></div></div>\n				</div>\n			</div>\n		</div>\n		<!--End Dashboard Tab 7-->\n	</div>\n	<div class=\"clearfix\"></div>\n</div>\n<!--End Dashboard 2 -->\n<div style=\"height: 40px;\"></div>\n<script type=\"text/javascript\">\n// Array for random data for Sparkline\nvar sparkline_arr_1 = SparklineTestData();\nvar sparkline_arr_2 = SparklineTestData();\nvar sparkline_arr_3 = SparklineTestData();\n$(document).ready(function() {\n	// Make all JS-activity for dashboard\n	DashboardTabChecker();\n	// Load Knob plugin and run callback for draw Knob charts for dashboard(tab-servers)\n	LoadKnobScripts(DrawKnobDashboard);\n	// Load Sparkline plugin and run callback for draw Sparkline charts for dashboard(top of dashboard + plot in tables)\n	LoadSparkLineScript(DrawSparklineDashboard);\n	// Load Morris plugin and run callback for draw Morris charts for dashboard\n	LoadMorrisScripts(MorrisDashboard);\n	// Load Springy plugin and run callback for draw network map for dashboard\n	LoadSpringyScripts(SpringyNetmap);\n	// Make beauty hover in table\n	$(\"#ticker-table\").beautyHover();\n	// Run script for stock block\n	CreateStockPage();\n});\n</script>\n",
+			"file": "protected/views/main/index.php",
+			"file_size": 23299,
+			"file_write_time": 131050450204584899,
+			"settings":
+			{
+				"buffer_size": 23291,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nclass CatMedidaController extends Controller\n{\n	/**\n	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning\n	 * using two-column layout. See 'protected/views/layouts/column2.php'.\n	 */\n	public $layout='//layouts/column2';\n\n	/**\n	 * @return array action filters\n	 */\n	public function filters()\n	{\n		return array(\n			'accessControl', // perform access control for CRUD operations\n			'postOnly + delete', // we only allow deletion via POST request\n		);\n	}\n\n	/**\n	 * Specifies the access control rules.\n	 * This method is used by the 'accessControl' filter.\n	 * @return array access control rules\n	 */\n	public function accessRules()\n	{\n		return array(\n			array('allow',  // allow all users to perform 'index' and 'view' actions\n				'actions'=>array('index','view'),\n				'users'=>array('*'),\n			),\n			array('allow', // allow authenticated user to perform 'create' and 'update' actions\n				'actions'=>array('create','update'),\n				'users'=>array('@'),\n			),\n			array('allow', // allow admin user to perform 'admin' and 'delete' actions\n				'actions'=>array('admin','delete'),\n				'users'=>array('admin'),\n			),\n			array('deny',  // deny all users\n				'users'=>array('*'),\n			),\n		);\n	}\n\n	/**\n	 * Displays a particular model.\n	 * @param integer $id the ID of the model to be displayed\n	 */\n	public function actionView($id)\n	{\n		$this->render('view',array(\n			'model'=>$this->loadModel($id),\n		));\n	}\n\n	/**\n	 * Creates a new model.\n	 * If creation is successful, the browser will be redirected to the 'view' page.\n	 */\n	public function actionCreate()\n	{\n		$model=new CatMedida;\n\n		// Uncomment the following line if AJAX validation is needed\n		// $this->performAjaxValidation($model);\n\n		if(isset($_POST['CatMedida']))\n		{\n			$model->attributes=$_POST['CatMedida'];\n			if($model->save())\n				$this->redirect(array('view','id'=>$model->id));\n		}\n\n		$this->render('create',array(\n			'model'=>$model,\n		));\n	}\n\n	/**\n	 * Updates a particular model.\n	 * If update is successful, the browser will be redirected to the 'view' page.\n	 * @param integer $id the ID of the model to be updated\n	 */\n	public function actionUpdate($id)\n	{\n		$model=$this->loadModel($id);\n\n		// Uncomment the following line if AJAX validation is needed\n		// $this->performAjaxValidation($model);\n\n		if(isset($_POST['CatMedida']))\n		{\n			$model->attributes=$_POST['CatMedida'];\n			if($model->save())\n				$this->redirect(array('view','id'=>$model->id));\n		}\n\n		$this->render('update',array(\n			'model'=>$model,\n		));\n	}\n\n	/**\n	 * Deletes a particular model.\n	 * If deletion is successful, the browser will be redirected to the 'admin' page.\n	 * @param integer $id the ID of the model to be deleted\n	 */\n	public function actionDelete($id)\n	{\n		$this->loadModel($id)->delete();\n\n		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser\n		if(!isset($_GET['ajax']))\n			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));\n	}\n\n	/**\n	 * Lists all models.\n	 */\n	public function actionIndex()\n	{\n		$dataProvider=new CActiveDataProvider('CatMedida');\n		$this->render('index',array(\n			'dataProvider'=>$dataProvider,\n		));\n	}\n\n	/**\n	 * Manages all models.\n	 */\n	public function actionAdmin()\n	{\n		$model=new CatMedida('search');\n		$model->unsetAttributes();  // clear any default values\n		if(isset($_GET['CatMedida']))\n			$model->attributes=$_GET['CatMedida'];\n\n		$this->render('admin',array(\n			'model'=>$model,\n		));\n	}\n\n	/**\n	 * Returns the data model based on the primary key given in the GET variable.\n	 * If the data model is not found, an HTTP exception will be raised.\n	 * @param integer $id the ID of the model to be loaded\n	 * @return CatMedida the loaded model\n	 * @throws CHttpException\n	 */\n	public function loadModel($id)\n	{\n		$model=CatMedida::model()->findByPk($id);\n		if($model===null)\n			throw new CHttpException(404,'The requested page does not exist.');\n		return $model;\n	}\n\n	/**\n	 * Performs the AJAX validation.\n	 * @param CatMedida $model the model to be validated\n	 */\n	protected function performAjaxValidation($model)\n	{\n		if(isset($_POST['ajax']) && $_POST['ajax']==='cat-medida-form')\n		{\n			echo CActiveForm::validate($model);\n			Yii::app()->end();\n		}\n	}\n}\n",
+			"file": "protected/controllers/CatMedidaController.php",
+			"file_size": 4251,
+			"file_write_time": 131049473617129140,
+			"settings":
+			{
+				"buffer_size": 4251,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Administracion</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Catalogo de medidas</h4>\n<?php $this->widget('zii.widgets.grid.CGridView', array(\n	'id'=>'cat-medida-grid',\n	'dataProvider'=>$model->search(),\n	'filter'=>$model,\n	'columns'=>array(\n		'id',\n		'nombre',\n		array(\n			'class'=>'CButtonColumn',\n		),\n	),\n)); ?>\n\n</div>\n</div>\n</div>\n\n\n",
+			"file": "protected/views/catMedida/admin.php",
+			"file_size": 782,
+			"file_write_time": 131049474119971599,
+			"settings":
+			{
+				"buffer_size": 782,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Administracion</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Agregar Materiales</h4>\n\n\n<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>\n</div>\n</div>\n</div>\n\n",
+			"file": "protected/views/invmat/create.php",
+			"file_size": 620,
+			"file_write_time": 131049495105034189,
+			"settings":
+			{
+				"buffer_size": 620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Invetario</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Agregar Reactivos</h4>\n\n\n<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>\n</div>\n</div>\n</div>\n",
+			"file": "protected/views/invReact/create.php",
+			"file_size": 613,
+			"file_write_time": 131049495389915582,
+			"settings":
+			{
+				"buffer_size": 613,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nclass InvmatController extends Controller\n{\n	/**\n	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning\n	 * using two-column layout. See 'protected/views/layouts/column2.php'.\n	 */\n	public $layout='//layouts/column2';\n\n	/**\n	 * @return array action filters\n	 */\n	public function filters()\n	{\n		return array(\n			'accessControl', // perform access control for CRUD operations\n			'postOnly + delete', // we only allow deletion via POST request\n		);\n	}\n\n	/**\n	 * Specifies the access control rules.\n	 * This method is used by the 'accessControl' filter.\n	 * @return array access control rules\n	 */\n	public function accessRules()\n	{\n		return array(\n			array('allow',  // allow all users to perform 'index' and 'view' actions\n				'actions'=>array('index','view'),\n				'users'=>array('*'),\n			),\n			array('allow', // allow authenticated user to perform 'create' and 'update' actions\n				'actions'=>array('create','update'),\n				'users'=>array('@'),\n			),\n			array('allow', // allow admin user to perform 'admin' and 'delete' actions\n				'actions'=>array('admin','delete'),\n				'users'=>array('admin'),\n			),\n			array('deny',  // deny all users\n				'users'=>array('*'),\n			),\n		);\n	}\n\n	/**\n	 * Displays a particular model.\n	 * @param integer $id the ID of the model to be displayed\n	 */\n	public function actionView($id)\n	{\n		$this->render('view',array(\n			'model'=>$this->loadModel($id),\n		));\n	}\n\n	/**\n	 * Creates a new model.\n	 * If creation is successful, the browser will be redirected to the 'view' page.\n	 */\n	public function actionCreate()\n	{\n		$model=new Invmat;\n\n		$resultCaracter = CatMat::model()->findAll(array('order'=>'id'));\n        $caracter = array();\n        $caracter['falso'] = 'Seleccionar';\n        foreach ($resultCaracter as $key => $value) {\n            $caracter[$value->id] = \"$value->nombre\";\n        }\n\n		// Uncomment the following line if AJAX validation is needed\n		// $this->performAjaxValidation($model);\n\n		if(isset($_POST['Invmat']))\n		{\n			$model->attributes=$_POST['Invmat'];\n			if($model->save())\n				$this->redirect(array('view','id'=>$model->id));\n		}\n\n		$this->render('create',array(\n			'model'=>$model,\n			'caracter'=>$caracter,\n		));\n	}\n\n	/**\n	 * Updates a particular model.\n	 * If update is successful, the browser will be redirected to the 'view' page.\n	 * @param integer $id the ID of the model to be updated\n	 */\n	public function actionUpdate($id)\n	{\n		$model=$this->loadModel($id);\n\n		// Uncomment the following line if AJAX validation is needed\n		// $this->performAjaxValidation($model);\n\n		if(isset($_POST['Invmat']))\n		{\n			$model->attributes=$_POST['Invmat'];\n			if($model->save())\n				$this->redirect(array('view','id'=>$model->id));\n		}\n\n		$this->render('update',array(\n			'model'=>$model,\n		));\n	}\n\n	/**\n	 * Deletes a particular model.\n	 * If deletion is successful, the browser will be redirected to the 'admin' page.\n	 * @param integer $id the ID of the model to be deleted\n	 */\n	public function actionDelete($id)\n	{\n		$this->loadModel($id)->delete();\n\n		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser\n		if(!isset($_GET['ajax']))\n			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));\n	}\n\n	/**\n	 * Lists all models.\n	 */\n	public function actionIndex()\n	{\n		$dataProvider=new CActiveDataProvider('Invmat');\n		$this->render('index',array(\n			'dataProvider'=>$dataProvider,\n		));\n	}\n\n	/**\n	 * Manages all models.\n	 */\n	public function actionAdmin()\n	{\n		$model=new Invmat('search');\n		$model->unsetAttributes();  // clear any default values\n		if(isset($_GET['Invmat']))\n			$model->attributes=$_GET['Invmat'];\n\n		$this->render('admin',array(\n			'model'=>$model,\n		));\n	}\n\n	/**\n	 * Returns the data model based on the primary key given in the GET variable.\n	 * If the data model is not found, an HTTP exception will be raised.\n	 * @param integer $id the ID of the model to be loaded\n	 * @return Invmat the loaded model\n	 * @throws CHttpException\n	 */\n	public function loadModel($id)\n	{\n		$model=Invmat::model()->findByPk($id);\n		if($model===null)\n			throw new CHttpException(404,'The requested page does not exist.');\n		return $model;\n	}\n\n	/**\n	 * Performs the AJAX validation.\n	 * @param Invmat $model the model to be validated\n	 */\n	protected function performAjaxValidation($model)\n	{\n		if(isset($_POST['ajax']) && $_POST['ajax']==='invmat-form')\n		{\n			echo CActiveForm::validate($model);\n			Yii::app()->end();\n		}\n	}\n}\n",
+			"file": "protected/controllers/InvmatController.php",
+			"file_size": 4494,
+			"file_write_time": 131049498414050366,
+			"settings":
+			{
+				"buffer_size": 4494,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nclass ApiController extends Controller\n{\n	public function actionCalendar()\n	{\n		   	\n/*\n {\n    \"title\": \"Long Event\",\n    \"start\": \"2016-01-07\",\n    \"end\": \"2016-01-10\"\n  },\n*/\n\n		/*	$data['title'] = \"Long Event\";\n			$data['start'] = \"2016-04-11\";\n			$data['end'] = \"2016-04-12\";\n\n			$miArray = array(\"manzana\"=>\"verde\", \"uva\"=>\"Morada\", \"fresa\"=>\"roja\");\nprint_r(json_encode($miArray));\n\n		*/\n\n		$data = array (\n			array(\n			'title'=>\"Grupo 1024\",\n			'start'=>\"2016-04-11T10:30:00-05:00\",\n			'end'=>\"2016-04-11T11:30:00-06:00\",\n			'color'=>'#257e4a'\n\n			),\n			array(\n			'title'=>\"Grupo 1024\",\n			'start'=>\"2016-04-12T10:30:00-05:00\",\n			'end'=>\"2016-04-11T11:30:00-06:00\"\n			),\n\n			array(\n			'title'=>\"Grupo 123\",\n			'start'=>\"2016-04-8T10:30:00-05:00\",\n			'end'=>\"2016-04-8T11:30:00-06:00\",\n			'color'=>'#257e4a'\n\n			),\n			array(\n			'title'=>\"Grupo 1034624\",\n			'start'=>\"2016-04-15T10:30:00-05:00\",\n			'end'=>\"2016-04-15T11:30:00-06:00\"\n			),\n\n			array(\n			'title'=>\"Grupo 342\",\n			'start'=>\"2016-04-13T10:30:00-05:00\",\n			'end'=>\"2016-04-13T11:30:00-06:00\",\n			'color'=>'#257e4a'\n\n			),\n			array(\n			'title'=>\"Grupo 1234023424\",\n			'start'=>\"2016-04-20T10:30:00-05:00\",\n			'end'=>\"2016-04-20T11:30:00-06:00\"\n			),\n		);\n\n	\n\n\n		   	header('Content-type: application/json');  \n            echo json_encode($data);  \n            Yii::app()->end();\n	}\n\n	// Uncomment the following methods and override them if needed\n	/*\n	public function filters()\n	{\n		// return the filter configuration for this controller, e.g.:\n		return array(\n			'inlineFilterName',\n			array(\n				'class'=>'path.to.FilterClass',\n				'propertyName'=>'propertyValue',\n			),\n		);\n	}\n\n	public function actions()\n	{\n		// return external action classes, e.g.:\n		return array(\n			'action1'=>'path.to.ActionClass',\n			'action2'=>array(\n				'class'=>'path.to.AnotherActionClass',\n				'propertyName'=>'propertyValue',\n			),\n		);\n	}\n	*/\n}",
+			"file": "protected/controllers/ApiController.php",
+			"file_size": 1904,
+			"file_write_time": 131049499760136947,
+			"settings":
+			{
+				"buffer_size": 1904,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Administracion</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Invetario de Reactivos</h4>\n<?php $this->widget('zii.widgets.grid.CGridView', array(\n	'id'=>'inv-react-grid',\n	'dataProvider'=>$model->search(),\n	'filter'=>$model,\n	'columns'=>array(\n		'id',\n		'id_material',\n		'id_plantel',\n		'id_medida',\n		'cantidad',\n		'fecha_reg',\n		/*\n		'fecha_mod',\n		*/\n		array(\n			'class'=>'CButtonColumn',\n		),\n	),\n)); ?>\n\n</div>\n</div>\n</div>\n\n\n",
+			"file": "protected/views/invReact/admin.php",
+			"file_size": 874,
+			"file_write_time": 131049489191485280,
+			"settings":
+			{
+				"buffer_size": 874,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Administracion</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Invetario de Materiales y Equipos</h4>\n<?php $this->widget('zii.widgets.grid.CGridView', array(\n	'id'=>'invmat-grid',\n	'dataProvider'=>$model->search(),\n	'filter'=>$model,\n	'columns'=>array(\n		'id',\n		'id_material',\n		'id_plantel',\n		'id_medida',\n		'cantidad',\n		'fecha_reg',\n		/*\n		'fecha_mod',\n		*/\n		array(\n			'class'=>'CButtonColumn',\n		),\n	),\n)); ?>\n\n</div>\n</div>\n</div>\n",
+			"file": "protected/views/invmat/admin.php",
+			"file_size": 880,
+			"file_write_time": 131049489544447005,
+			"settings":
+			{
+				"buffer_size": 880,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Administracion</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Catalogo de Materiales</h4>\n<?php $this->widget('zii.widgets.grid.CGridView', array(\n	'id'=>'cat-mat-grid',\n	'dataProvider'=>$model->search(),\n	'filter'=>$model,\n	'columns'=>array(\n		'id',\n		'categoria',\n		'tipo',\n		'clave',\n		'nombre',\n		'unidad',\n		/*\n		'status',\n		*/\n		array(\n			'class'=>'CButtonColumn',\n		),\n	),\n)); ?>\n\n</div>\n</div>\n</div>\n\n",
+			"file": "protected/views/catMat/admin.php",
+			"file_size": 851,
+			"file_write_time": 131049476524623354,
+			"settings":
+			{
+				"buffer_size": 851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!--Start Breadcrumb-->\n<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"<?php echo CController::createUrl('main/index'); ?>\">Inicio</a></li>\n			<li>Administracion</li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n		\n		</div>\n	</div>\n</div>\n<!--End Breadcrumb-->\n<div class=\"row\">\n\n	<div class=\"col-xs-12 col-sm-9\">\n<div class=\"box-content\">\n<h4 class=\"page-header\">Catalogo de Reactivos</h4>\n<?php $this->widget('zii.widgets.grid.CGridView', array(\n	'id'=>'cat-react-grid',\n	'dataProvider'=>$model->search(),\n	'filter'=>$model,\n	'columns'=>array(\n		'id',\n		'categoria',\n		'clave',\n		'nombre',\n		'unidad',\n		'status',\n		array(\n			'class'=>'CButtonColumn',\n		),\n	),\n)); ?>\n\n</div>\n</div>\n</div>\n\n",
+			"file": "protected/views/catReact/admin.php",
+			"file_size": 832,
+			"file_write_time": 131049477335987321,
+			"settings":
+			{
+				"buffer_size": 832,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"row\">\n	<div id=\"breadcrumb\" class=\"col-xs-12\">\n		<a href=\"#\" class=\"show-sidebar\">\n			<i class=\"fa fa-bars\"></i>\n		</a>\n		<ol class=\"breadcrumb pull-left\">\n			<li><a href=\"index.html\">Dashboard</a></li>\n			<li><a href=\"#\">Charts</a></li>\n			<li><a href=\"#\">xCharts</a></li>\n		</ol>\n		<div id=\"social\" class=\"pull-right\">\n			<a href=\"#\"><i class=\"fa fa-google-plus\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-facebook\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-twitter\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-linkedin\"></i></a>\n			<a href=\"#\"><i class=\"fa fa-youtube\"></i></a>\n		</div>\n	</div>\n</div>\n<div class=\"row\">\n	<div class=\"col-xs-12 col-sm-6\">\n		<div class=\"box\">\n			<div class=\"box-header\">\n				<div class=\"box-name\">\n					<i class=\"fa fa-search\"></i>\n					<span>Plot with points</span>\n				</div>\n				<div class=\"box-icons\">\n					<a class=\"collapse-link\">\n						<i class=\"fa fa-chevron-up\"></i>\n					</a>\n					<a class=\"expand-link\">\n						<i class=\"fa fa-expand\"></i>\n					</a>\n					<a class=\"close-link\">\n						<i class=\"fa fa-times\"></i>\n					</a>\n				</div>\n				<div class=\"no-move\"></div>\n			</div>\n			<div class=\"box-content\">\n				<div id=\"xchart-1\" style=\"height: 200px; width: 100%;\"></div>\n			</div>\n		</div>\n	</div>\n	<div class=\"col-xs-12 col-sm-6\">\n		<div class=\"box\">\n			<div class=\"box-header\">\n				<div class=\"box-name\">\n					<i class=\"fa fa-search\"></i>\n					<span>Company cost (billions of dollars)</span>\n				</div>\n				<div class=\"box-icons\">\n					<a class=\"collapse-link\">\n						<i class=\"fa fa-chevron-up\"></i>\n					</a>\n					<a class=\"expand-link\">\n						<i class=\"fa fa-expand\"></i>\n					</a>\n					<a class=\"close-link\">\n						<i class=\"fa fa-times\"></i>\n					</a>\n				</div>\n				<div class=\"no-move\"></div>\n			</div>\n			<div class=\"box-content\">\n				<div id=\"xchart-2\" style=\"height: 200px;\"></div>\n			</div>\n		</div>\n	</div>\n</div>\n<div class=\"row\">\n	<div class=\"col-xs-12\">\n		<div class=\"box\">\n			<div class=\"box-header\">\n				<div class=\"box-name\">\n					<i class=\"fa fa-search\"></i>\n					<span>Thresholds</span>\n				</div>\n				<div class=\"box-icons\">\n					<a class=\"collapse-link\">\n						<i class=\"fa fa-chevron-up\"></i>\n					</a>\n					<a class=\"expand-link\">\n						<i class=\"fa fa-expand\"></i>\n					</a>\n					<a class=\"close-link\">\n						<i class=\"fa fa-times\"></i>\n					</a>\n				</div>\n				<div class=\"no-move\"></div>\n			</div>\n			<div class=\"box-content\">\n				<div id=\"xchart-3\" style=\"height: 200px;\"></div>\n			</div>\n		</div>\n	</div>\n</div>\n<script type=\"text/javascript\">\n// Draw all test xCharts\nfunction DrawAllxCharts(){\n	xGraph1();\n	xGraph2();\n	xGraph3();\n}\n$(document).ready(function() {\n	// Load required scripts and callback to draw\n	LoadXChartScript(DrawAllxCharts);\n	// Required for correctly resize charts, when boxes expand\n	var graphxChartsResize;\n	$(\".box\").resize(function(event){\n		event.preventDefault();\n		clearTimeout(graphxChartsResize);\n		graphxChartsResize = setTimeout(DrawAllxCharts, 500);\n	});\n	WinMove();\n});\n</script>\n",
+			"file": "protected/views/main/xcharts.php",
+			"file_size": 2993,
+			"file_write_time": 131049481645408389,
+			"settings":
+			{
+				"buffer_size": 2993,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/var/www/html/silac",
+		"/var/www/html/silac/protected",
+		"/var/www/html/silac/protected/extensions"
+	],
+	"file_history":
+	[
+		"/var/www/html/silac/index-test.php",
+		"/var/www/html/silac/protected/views/site/indexresp.php",
+		"/var/www/html/silac/protected/config/main.php",
+		"/var/www/html/silac/protected/controllers/SiteController.php",
+		"/var/www/html/silac/protected/controllers/MainController.php",
+		"/var/www/html/silac/protected/views/site/calendario.php",
+		"/var/www/html/silac/protected/views/main/calendario.php",
+		"/var/www/html/silac/protected/controllers/ApiController.php",
+		"/home/cesar/Descargas/invitado.php",
+		"/home/cesar/Descargas/ninos.php",
+		"/var/www/html/silac/json/events.json",
+		"/var/www/html/silac/protected/views/layouts/main2.php",
+		"/var/www/html/silac/protected/views/layouts/main.php",
+		"/var/www/html/silac/protected/views/catCatMat/admin.php",
+		"/var/www/html/silac/js/devoops.js",
+		"/var/www/html/silac/protected/views/main/index.php",
+		"/var/www/html/silac/protected/views/main/xcharts.php",
+		"/var/www/html/silac/protected/views/layouts/login.php",
+		"/var/www/html/silac/protected/views/site/login.php",
+		"/home/cesar/Descargas/index.php",
+		"/var/www/html/silac/protected/views/site/main.php",
+		"/var/www/html/sitio/sindicato/login.php",
+		"/home/cesar/Escritorio/nuevo_cambio/.htaccess",
+		"/var/www/html/sitio/sindicato/validate_login.php",
+		"/home/cesar/Escritorio/nuevo_cambio/login.php",
+		"/home/cesar/Descargas/sitio-12 (2)/sitio-12/js/functions.js",
+		"/var/www/html/spdgm/.htaccess",
+		"/var/www/html/sitio/sindicato/validate_prueba4.php",
+		"/var/www/html/encuesta/index.php",
+		"/var/www/html/encuesta/mail.php",
+		"/var/www/html/encuesta/captura_datos.php",
+		"/var/www/html/sitio/sindicato/validate_login_org.php",
+		"/var/www/html/sitio/sindicato/test4.php",
+		"/home/cesar/Escritorio/cambios/sindicato/login.php",
+		"/var/www/html/sitio/sindicato/validate_logintelcel.php",
+		"/var/www/html/alertify/ejemplo.html",
+		"/home/cesar/Escritorio/cambios/sindicato/validate_login.php",
+		"/var/www/html/alertify/grunt.js",
+		"/var/www/html/sigedo/protected/views/documentos/_form.php",
+		"/var/www/html/sitio/sindicato/index.php",
+		"/var/www/html/sitio/sindicato/test3.php",
+		"/var/www/html/sitio/sindicato/test1.php",
+		"/var/www/html/sitio/sindicato/prueba_web4.php",
+		"/var/www/html/sitio/js/functions.js",
+		"/var/www/html/basic/config/web.php",
+		"/home/cesar/Descargas/correyjuegadb.15032016.sql",
+		"/var/www/html/sitio/connection/web.php",
+		"/var/www/html/sigedo/protected/controllers/ApipdfController.php",
+		"/var/www/html/sedeco/protected/controllers/ApipdfController.php",
+		"/var/www/html/sedeco/protected/views/site/page67.php",
+		"/var/www/html/sedeco/protected/views/site/page55.php",
+		"/var/www/html/sigedo/protected/views/main/index.php",
+		"/var/www/html/sigedo/protected/views/documentos/_form2.php",
+		"/var/www/html/sigedo/protected/controllers/DocumentosController.php",
+		"/var/www/html/sigedo/protected/views/informes/_salida.php",
+		"/var/www/html/sigedo/protected/views/informes/_turnos.php",
+		"/var/www/html/sigedo/protected/views/informes/index.php",
+		"/var/www/html/sigedo/protected/controllers/InformesController.php",
+		"/var/www/html/sigedo/protected/views/documentos/_formc.php",
+		"/var/www/html/sigedo/protected/views/documentos/create2.php",
+		"/var/www/html/sigedo/protected/views/layouts/main.php",
+		"/var/www/html/sigedo/sigedo.sublime-project",
+		"/var/www/html/sigedo/protected/config/main.php",
+		"/var/www/html/sigedo/protected/controllers/TurnosController.php",
+		"/var/www/html/sigedo/protected/views/turnos/_form.php",
+		"/home/cesar/Descargas/lab_ciencias.out",
+		"/var/www/html/silac/app3/controllers/consultas_controller.php",
+		"/var/www/html/sigedo/protected/controllers/CorrespondenciaController.php",
+		"/var/www/html/silac/app/config/database.php",
+		"/var/www/html/intra_ppe/app/config/database.php",
+		"/media/cesar/OneTouch 4/Proyectos/respaldos/intra_ppe/app/config/bootstrap.php",
+		"/media/cesar/OneTouch 4/Proyectos/respaldos/intra_ppe/app/config/routes.php",
+		"/media/cesar/OneTouch 4/Proyectos/respaldos/ppe_pasec/app/controllers/eventos_controller.php",
+		"/var/www/html/silac/index.php",
+		"/var/www/html/silac/app/views/consultas/calendario_mes.ctp",
+		"/var/www/html/sigedo/protected/views/correspondencia/_form2.php",
+		"/var/www/html/sigedo/protected/models/Areas.php",
+		"/home/cesar/Descargas/.htaccess",
+		"/var/www/html/sigedo/css/my-custom-styles.css",
+		"/var/www/html/sigiems2/clases/config/Config.class.php",
+		"/var/www/html/sigiems2/includes/config.inc.php",
+		"/var/www/html/sigedo/protected/controllers/CorrespondenciaControllerresp.php",
+		"/home/cesar/Descargas/RadiacionUVB2015-radiacion_2015UVB.json",
+		"/var/www/html/sigedo/protected/views/documentos/_formupdate.php",
+		"/var/www/html/sigedo/protected/models/SalidaView.php",
+		"/var/www/html/sigedo/protected/models/EntradaView.php",
+		"/var/www/html/sigedo/protected/controllers/MainController.php",
+		"/var/www/html/sigedo/protected/views/correspondencia/_form3.php",
+		"/var/www/html/sigedo/protected/views/turnosList/admin.php",
+		"/var/www/html/sigedo/protected/views/directorioView/admin.php",
+		"/var/www/html/silac/apps/frontend/modules/ingreso/actions/actions.class.php",
+		"/var/www/html/sigedo/protected/models/TurnosList.php",
+		"/var/www/html/sigedo/protected/views/turnos/_info.php",
+		"/var/www/html/sigedo/protected/models/Turnos.php",
+		"/var/www/html/sigedo/protected/models/Expedientes.php",
+		"/var/www/html/sigedo/protected/controllers/ExpedientesController.php",
+		"/var/www/html/sigedo/protected/views/turnos/returnar.php",
+		"/var/www/html/sigedo/protected/views/turnos/create.php",
+		"/var/www/html/sigedo/protected/views/expedientes/create.php",
+		"/var/www/html/sigedo/protected/views/expedientes/update.php",
+		"/var/www/html/sigedo/protected/views/expedientes/_form.php",
+		"/var/www/html/sigedo/protected/views/directorio/_form2.php",
+		"/var/www/html/sigedo/protected/views/turnos/_formr.php"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"756",
+			"					<i class=\"fa fa-usd\"></i>756",
+			"<i class=\"fa fa-usd\"></i>",
+			"LoadAjaxContent",
+			"auth",
+			"endif",
+			"sindicato",
+			"inicio",
+			"el id",
+			"echo",
+			"acuse",
+			"acusef",
+			"ap1Ind72",
+			"titulo",
+			"performAjaxValidation",
+			"ASCII",
+			"SQL_ASCII",
+			"public function getImagen(){\n\n	//	$imagen=\"validado.png\";\n		if($this->estado_acuse=='1'){\n		$imagen=\"<div class=\\\"label label-success\\\"><i class=\\\"fa fa-check-circle\\\"></i> CONFIRMADO</button></div>\";\n		}\n	    if($this->estado_acuse=='0'){\n		$imagen=\"<div class=\\\"label label-danger\\\"><i class=\\\"fa fa-danger\\\"></i> SIN CONFIRMAR</div>\";	\n		}\n\n\n		return $imagen;\n\n		}",
+			"correspondencia"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "protected/views/layouts/main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5764,
+								5764
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2970.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "protected/views/catPlanteles/admin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								712,
+								712
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 352.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "protected/views/main/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8659,
+								8659
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 336.0,
+						"translation.y": 5544.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "protected/controllers/CatMedidaController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "protected/views/catMedida/admin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "protected/views/invmat/create.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "protected/views/invReact/create.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								293,
+								293
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "protected/controllers/InvmatController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2183,
+								2183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "protected/controllers/ApiController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								891,
+								891
+							],
+							[
+								930,
+								930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "protected/views/invReact/admin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "protected/views/invmat/admin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 205.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "protected/views/catMat/admin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "protected/views/catReact/admin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								832,
+								832
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 893.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "protected/views/main/xcharts.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2993,
+								2993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1619.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "silac.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 1028.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/var/www/html/sigedo/sigedo.sublime-project"
+			],
+			[
+				"si",
+				"/var/www/html/sigedo/sigedo.sublime-project"
+			]
+		],
+		"width": 1863.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 268.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
