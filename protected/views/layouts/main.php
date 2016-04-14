@@ -142,6 +142,34 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-table"></i>
+						 <span class="hidden-xs">Solicitudes Docente</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Apartar Sesiones</a></li>
+						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Registrar Materiales</a></li>
+						<li><a href="<?php echo CController::createUrl('sesiones/admin'); ?>">Registrar Reactivos</a></li>
+						
+						
+						
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-table"></i>
+						 <span class="hidden-xs">Sesiones</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Registrar Sesiones</a></li>
+						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Registrar Accidentes</a></li>
+						<li><a href="<?php echo CController::createUrl('sesiones/admin'); ?>">Consulta Sesiones</a></li>
+						
+						
+						
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-table"></i>
 						 <span class="hidden-xs">Consumo</span>
 					</a>
 					<ul class="dropdown-menu">
