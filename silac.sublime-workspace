@@ -4,101 +4,321 @@
 		"selected_items":
 		[
 			[
-				"BUT",
-				"button"
+				"b",
+				"blur〔function〕"
+			],
+			[
+				"h",
+				"hidden〔function〕"
+			],
+			[
+				"html",
+				"htmlOptions"
+			],
+			[
+				"to",
+				"token_data"
+			],
+			[
+				"_",
+				"_SESSION"
+			],
+			[
+				"do",
+				"documento"
+			],
+			[
+				"ali",
+				"text-align"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"find",
+				"findByPk"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"id",
+				"id_area"
+			],
+			[
+				"add",
+				"addTask"
+			],
+			[
+				"g",
+				"getElementById"
+			],
+			[
+				"get",
+				"getElemetById"
+			],
+			[
+				"ape",
+				"apellido_m"
+			],
+			[
+				"apellid",
+				"apellido_p"
+			],
+			[
+				"al",
+				"align"
+			],
+			[
+				"AL",
+				"align"
+			],
+			[
+				"c",
+				"contador2"
+			],
+			[
+				"id_",
+				"id_periodo"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"en",
+				"encabezado"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"per",
+				"periodo"
+			],
+			[
+				"_a",
+				"_archivo"
+			],
+			[
+				"ul",
+				"urlencode"
+			],
+			[
+				"re",
+				"resultado"
+			],
+			[
+				"php",
+				"phpcredits"
+			],
+			[
+				"r",
+				"resultado"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"s",
+				"scriptUrl"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"nu",
+				"number_format"
 			],
 			[
 				"is",
-				"isset"
+				"is_array"
 			],
 			[
-				"pri",
+				"con",
+				"configuracion"
+			],
+			[
+				"in",
+				"indicador"
+			],
+			[
+				"H",
+				"HistoricoPeriodos"
+			],
+			[
+				"mssq",
+				"mssql_connect"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"ht",
+				"htmlentities"
+			],
+			[
+				"ut",
+				"utf8_encode"
+			],
+			[
+				"VE",
+				"venustiano"
+			],
+			[
+				"HI",
+				"hidalgo"
+			],
+			[
+				"CUA",
+				"cuautemoc"
+			],
+			[
+				"OB",
+				"obregon"
+			],
+			[
+				"iz",
+				"iztapalapa"
+			],
+			[
+				"cua",
+				"cuajimalpa"
+			],
+			[
+				"Ap1",
+				"ap1Ind1Hist"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"a",
+				"align	Attr"
+			],
+			[
+				"parent_",
+				"parent_id"
+			],
+			[
+				"parent",
+				"parent"
+			],
+			[
+				"ren",
+				"render"
+			],
+			[
+				"ex",
+				"expressServer"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bo",
+				"bootstrap"
+			],
+			[
+				"p",
+				"padding-left"
+			],
+			[
+				"alin",
+				"vertical-align"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"lef",
+				"left"
+			],
+			[
+				"positio",
+				"position"
+			],
+			[
+				"pre",
+				"presupuesto"
+			],
+			[
+				"print",
 				"print_r"
 			],
 			[
-				"ch",
-				"charset"
+				"er",
+				"ereg_replace"
 			],
 			[
-				"em",
-				"empty"
-			],
-			[
-				"ar",
-				"arg_list"
-			],
-			[
-				"var",
-				"var_dump"
+				"impo",
+				"importet"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "protected/views/main/index.php",
-			"settings":
-			{
-				"buffer_size": 23282,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/layouts/main.php",
-			"settings":
-			{
-				"buffer_size": 15959,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/sesiones/create.php",
-			"settings":
-			{
-				"buffer_size": 1234,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/sesiones/admin.php",
-			"settings":
-			{
-				"buffer_size": 1420,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/models/Sesiones.php",
-			"settings":
-			{
-				"buffer_size": 4388,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/views/sesiones/_form.php",
-			"settings":
-			{
-				"buffer_size": 14240,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/models/CatTurno.php",
-			"settings":
-			{
-				"buffer_size": 1977,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "protected/controllers/SesionesController.php",
-			"settings":
-			{
-				"buffer_size": 7087,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -107,18 +327,70 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 390.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Add Repository"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ge",
+				"Laravel Generate: Resource"
+			],
+			[
+				"gene",
+				"Laravel Generate: Resource"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"lara",
+				"Laravel Artisan: Migrate"
+			],
+			[
+				"list",
+				"Laravel Artisan: Queue: Listen"
+			],
+			[
+				"Package Control: b",
+				"Package Control: Enable Package"
+			],
+			[
+				"Packa",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: back",
+				"Package Control: Enable Package"
+			]
 		],
-		"width": 0.0
+		"width": 818.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 139.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
 		]
 	},
 	"distraction_free":
@@ -133,137 +405,142 @@
 	"expanded_folders":
 	[
 		"/var/www/html/silac",
-		"/var/www/html/silac/js",
-		"/var/www/html/silac/protected",
-		"/var/www/html/silac/protected/commands",
-		"/var/www/html/silac/protected/controllers",
-		"/var/www/html/silac/protected/extensions",
-		"/var/www/html/silac/protected/models",
-		"/var/www/html/silac/protected/views",
-		"/var/www/html/silac/protected/views/api",
-		"/var/www/html/silac/protected/views/layouts",
-		"/var/www/html/silac/protected/views/main",
-		"/var/www/html/silac/protected/views/sesiones"
+		"/var/www/html/silac/protected"
 	],
 	"file_history":
 	[
-		"/var/www/html/silac/protected/views/catPlanteles/admin.php",
-		"/var/www/html/silac/protected/views/layouts/main.php",
-		"/var/www/html/silac/protected/views/main/index.php",
-		"/var/www/html/silac/protected/controllers/CatMedidaController.php",
-		"/var/www/html/silac/protected/views/catMedida/admin.php",
-		"/var/www/html/silac/protected/views/invmat/create.php",
-		"/var/www/html/silac/protected/views/invReact/create.php",
-		"/var/www/html/silac/protected/controllers/InvmatController.php",
-		"/var/www/html/silac/protected/controllers/ApiController.php",
-		"/var/www/html/silac/protected/views/invReact/admin.php",
-		"/var/www/html/silac/protected/views/invmat/admin.php",
-		"/var/www/html/silac/protected/views/catMat/admin.php",
-		"/var/www/html/silac/protected/views/catReact/admin.php",
-		"/var/www/html/silac/protected/views/main/xcharts.php",
-		"/var/www/html/silac/index-test.php",
-		"/var/www/html/silac/protected/views/site/indexresp.php",
-		"/var/www/html/silac/protected/config/main.php",
-		"/var/www/html/silac/protected/controllers/SiteController.php",
-		"/var/www/html/silac/protected/controllers/MainController.php",
-		"/var/www/html/silac/protected/views/site/calendario.php",
-		"/var/www/html/silac/protected/views/main/calendario.php",
-		"/home/cesar/Descargas/invitado.php",
-		"/home/cesar/Descargas/ninos.php",
-		"/var/www/html/silac/json/events.json",
-		"/var/www/html/silac/protected/views/layouts/main2.php",
-		"/var/www/html/silac/protected/views/catCatMat/admin.php",
-		"/var/www/html/silac/js/devoops.js",
-		"/var/www/html/silac/protected/views/layouts/login.php",
-		"/var/www/html/silac/protected/views/site/login.php",
-		"/home/cesar/Descargas/index.php",
-		"/var/www/html/silac/protected/views/site/main.php",
-		"/var/www/html/sitio/sindicato/login.php",
-		"/home/cesar/Escritorio/nuevo_cambio/.htaccess",
-		"/var/www/html/sitio/sindicato/validate_login.php",
-		"/home/cesar/Escritorio/nuevo_cambio/login.php",
-		"/home/cesar/Descargas/sitio-12 (2)/sitio-12/js/functions.js",
-		"/var/www/html/spdgm/.htaccess",
-		"/var/www/html/sitio/sindicato/validate_prueba4.php",
-		"/var/www/html/encuesta/index.php",
-		"/var/www/html/encuesta/mail.php",
-		"/var/www/html/encuesta/captura_datos.php",
-		"/var/www/html/sitio/sindicato/validate_login_org.php",
-		"/var/www/html/sitio/sindicato/test4.php",
-		"/home/cesar/Escritorio/cambios/sindicato/login.php",
-		"/var/www/html/sitio/sindicato/validate_logintelcel.php",
-		"/var/www/html/alertify/ejemplo.html",
-		"/home/cesar/Escritorio/cambios/sindicato/validate_login.php",
-		"/var/www/html/alertify/grunt.js",
-		"/var/www/html/sigedo/protected/views/documentos/_form.php",
-		"/var/www/html/sitio/sindicato/index.php",
-		"/var/www/html/sitio/sindicato/test3.php",
-		"/var/www/html/sitio/sindicato/test1.php",
-		"/var/www/html/sitio/sindicato/prueba_web4.php",
-		"/var/www/html/sitio/js/functions.js",
-		"/var/www/html/basic/config/web.php",
-		"/home/cesar/Descargas/correyjuegadb.15032016.sql",
-		"/var/www/html/sitio/connection/web.php",
-		"/var/www/html/sigedo/protected/controllers/ApipdfController.php",
-		"/var/www/html/sedeco/protected/controllers/ApipdfController.php",
-		"/var/www/html/sedeco/protected/views/site/page67.php",
-		"/var/www/html/sedeco/protected/views/site/page55.php",
-		"/var/www/html/sigedo/protected/views/main/index.php",
-		"/var/www/html/sigedo/protected/views/documentos/_form2.php",
-		"/var/www/html/sigedo/protected/controllers/DocumentosController.php",
-		"/var/www/html/sigedo/protected/views/informes/_salida.php",
-		"/var/www/html/sigedo/protected/views/informes/_turnos.php",
-		"/var/www/html/sigedo/protected/views/informes/index.php",
-		"/var/www/html/sigedo/protected/controllers/InformesController.php",
-		"/var/www/html/sigedo/protected/views/documentos/_formc.php",
-		"/var/www/html/sigedo/protected/views/documentos/create2.php",
-		"/var/www/html/sigedo/protected/views/layouts/main.php",
-		"/var/www/html/sigedo/sigedo.sublime-project",
+		"/var/www/html/spdgm/protected/views/baseCap/_form.php",
+		"/var/www/html/spdgm/protected/controllers/ApipdfController.php",
+		"/var/www/html/spdgm/protected/views/pagos/_imprimir.php",
+		"/var/www/html/spdgm/protected/controllers/PagosController.php",
+		"/var/www/html/spdgm/protected/controllers/PresupuestoController.php",
+		"/home/cesar/.ssh/id_rsa.pub",
+		"/var/www/html/spdgm/protected/views/pagos/_polizas.php",
+		"/var/www/html/spdgm/protected/controllers/InformesfaController.php",
+		"/var/www/html/spdgm/protected/views/informesfa/_criterios.php",
+		"/var/www/html/spdgm/protected/views/informesfa/_rpt.php",
+		"/var/www/html/spdgm/protected/controllers/BaseCapController.php",
+		"/var/www/html/spdgm/protected/views/baseCap/create.php",
+		"/var/www/html/spdgm/protected/controllers/ApiController.php",
+		"/var/www/html/spdgm/protected/controllers/ProveedoresController.php",
+		"/var/www/html/spdgm/protected/views/proveedores/_rpt.php",
+		"/var/www/html/spdgm/protected/views/pagos/admin.php",
+		"/var/www/html/spdgm/protected/views/pagos/admin2.php",
+		"/home/cesar/Descargas/Adobe Illustrator CS6 for professional logo designers/06 source file of training/001 first training Logo Design.html",
+		"/var/www/html/spdgm/protected/views/proveedores/ApipdfController.php",
+		"/var/www/html/spdgm/protected/config/main.php",
+		"/var/www/html/spdgm/protected/views/proveedores/_form.php",
+		"/var/www/html/spdgm/protected/views/proveedores/_criterios.php",
+		"/var/www/html/sigedoviejo/seguridad/procesos/actualizar_correspondencia.php",
+		"/var/www/html/sigedoviejo/xml/compartido/Bandejafiltros.html",
+		"/var/www/html/sigedoviejo/seguridad/class2.0/Sigedo20_class.html",
+		"/var/www/html/sigedo/sigedonew.sublime-workspace",
 		"/var/www/html/sigedo/protected/config/main.php",
-		"/var/www/html/sigedo/protected/controllers/TurnosController.php",
-		"/var/www/html/sigedo/protected/views/turnos/_form.php",
-		"/home/cesar/Descargas/lab_ciencias.out",
-		"/var/www/html/silac/app3/controllers/consultas_controller.php",
-		"/var/www/html/sigedo/protected/controllers/CorrespondenciaController.php",
-		"/var/www/html/silac/app/config/database.php",
-		"/var/www/html/intra_ppe/app/config/database.php",
-		"/media/cesar/OneTouch 4/Proyectos/respaldos/intra_ppe/app/config/bootstrap.php",
-		"/media/cesar/OneTouch 4/Proyectos/respaldos/intra_ppe/app/config/routes.php",
-		"/media/cesar/OneTouch 4/Proyectos/respaldos/ppe_pasec/app/controllers/eventos_controller.php",
-		"/var/www/html/silac/index.php",
-		"/var/www/html/silac/app/views/consultas/calendario_mes.ctp",
-		"/var/www/html/sigedo/protected/views/correspondencia/_form2.php",
-		"/var/www/html/sigedo/protected/models/Areas.php",
-		"/home/cesar/Descargas/.htaccess",
-		"/var/www/html/sigedo/css/my-custom-styles.css",
-		"/var/www/html/sigiems2/clases/config/Config.class.php",
-		"/var/www/html/sigiems2/includes/config.inc.php",
-		"/var/www/html/sigedo/protected/controllers/CorrespondenciaControllerresp.php",
-		"/home/cesar/Descargas/RadiacionUVB2015-radiacion_2015UVB.json",
-		"/var/www/html/sigedo/protected/views/documentos/_formupdate.php",
-		"/var/www/html/sigedo/protected/models/SalidaView.php",
-		"/var/www/html/sigedo/protected/models/EntradaView.php",
-		"/var/www/html/sigedo/protected/controllers/MainController.php",
-		"/var/www/html/sigedo/protected/views/correspondencia/_form3.php",
-		"/var/www/html/sigedo/protected/views/turnosList/admin.php",
-		"/var/www/html/sigedo/protected/views/directorioView/admin.php",
-		"/var/www/html/silac/apps/frontend/modules/ingreso/actions/actions.class.php",
-		"/var/www/html/sigedo/protected/models/TurnosList.php",
-		"/var/www/html/sigedo/protected/views/turnos/_info.php",
-		"/var/www/html/sigedo/protected/models/Turnos.php",
-		"/var/www/html/sigedo/protected/models/Expedientes.php",
-		"/var/www/html/sigedo/protected/controllers/ExpedientesController.php",
-		"/var/www/html/sigedo/protected/views/turnos/returnar.php",
-		"/var/www/html/sigedo/protected/views/turnos/create.php",
-		"/var/www/html/sigedo/protected/views/expedientes/create.php",
-		"/var/www/html/sigedo/protected/views/expedientes/update.php",
-		"/var/www/html/sigedo/protected/views/expedientes/_form.php",
-		"/var/www/html/sigedo/protected/views/directorio/_form2.php",
-		"/var/www/html/sigedo/protected/views/turnos/_formr.php"
+		"/var/www/html/sigedo/.htaccess",
+		"/var/www/html/sigedoviejo/seguridad/class/Correspondencia_class.php",
+		"/var/www/html/sigedoviejo/seguridad/class/Correspondencia.html",
+		"/var/www/html/sigedoviejo/seguridad/class/Turnos_class.php",
+		"/var/www/html/sigedoviejo/seguridad/class/Turnos.html",
+		"/var/www/html/sigedoviejo/seguridad/class/Documentos_class.php",
+		"/var/www/html/sigedoviejo/seguridad/procesos/actualizar_turnos.php",
+		"/var/www/html/sigedoviejo/xml/correspondenciaXml.php",
+		"/var/www/html/sigedoviejo/xml/tiposCorrespondenciaXml.php",
+		"/var/www/html/sigedoviejo/xml/XmlCorrespondencia.php",
+		"/var/www/html/sigedoviejo/seguridad/procesos/insertar_correspondencia.php",
+		"/var/www/html/sigedoviejo/seguridad/Sigedo2.0.php",
+		"/var/www/html/sigedoviejo/seguridad/class2.0/Correspondencia_class.php",
+		"/var/www/html/sigedoviejo/xml/gruposXml.php",
+		"/var/www/html/sigedo/protected/views/documentos/_form.php",
+		"/var/www/html/sigedoviejo/xml/datosUsuarioXml.php",
+		"/var/www/html/sigedoviejo/seguridad/class2.0/Usuarios_class.php",
+		"/var/www/html/sigedoviejo/seguridad/procesos/insertar_turnos.php",
+		"/var/www/html/sigedoviejo/seguridad/class2.0/Turnos_class.php",
+		"/var/www/html/sigedoviejo/seguridad/class2.0/Documentos_class.php",
+		"/var/www/html/sigedoviejo/index.html",
+		"/var/www/html/sigedoviejo/procesar.php",
+		"/var/www/html/sigedo/index.html",
+		"/var/www/html/sigedoviejo/seguridad/condb/conmyr.php",
+		"/var/www/html/sedudf/slide.php",
+		"/var/www/html/spdgm/themes/abound/views/layouts/tpl_navigation.php",
+		"/var/www/html/spdgm/protected/views/presupuesto/_addpresupuesto.php",
+		"/var/www/html/sedudf/jimgMenu.css",
+		"/var/www/html/sedudf/index.html",
+		"/home/cesar/sedeco/protected/views/site/page124.php",
+		"/home/cesar/sedeco/protected/views/site/page115.php",
+		"/var/www/html/portal2/wp-settings.php",
+		"/var/www/html/portal2/wp-config.php",
+		"/home/cesar/.cache/.fr-KM11MA/7-Performance(Desempe¤o)/inicio_calse/js/aplicacion.js",
+		"/home/cesar/sedeco/protected/views/site/page28.php",
+		"/home/cesar/correccionesSedeco/page28.php",
+		"/home/cesar/sedeco/protected/views/site/page94.php",
+		"/home/cesar/sedeco/protected/controllers/ApipdfController.php",
+		"/home/cesar/sedeco/protected/views/site/page78.php",
+		"/home/cesar/sedeco/protected/views/site/page77.php",
+		"/home/cesar/sedeco/protected/views/site/page71.php",
+		"/home/cesar/sedeco/css/estilos-personalizadospdf.css",
+		"/home/cesar/sedeco/protected/views/site/page64.php",
+		"/home/cesar/sedeco/protected/views/site/page51.php",
+		"/var/www/html/portal/wp-config.php",
+		"/var/www/html/portal/.htaccess",
+		"/home/cesar/sedeco/protected/views/site/page48.php",
+		"/home/cesar/sedeco/protected/controllers/SiteController.php",
+		"/home/cesar/.cache/.fr-qv0pFq/db_1.sql",
+		"/home/cesar/sedeco/protected/views/site/page62.php",
+		"/home/cesar/sedeco/protected/views/site/page221.php",
+		"/home/cesar/sedeco/protected/views/site/page55.php",
+		"/home/cesar/sedeco/protected/views/site/page219.php",
+		"/home/cesar/sedeco/protected/controllers/Api2Controller.php",
+		"/home/cesar/sedeco/protected/.htaccess",
+		"/home/cesar/sedeco/protected/controllers/.htaccess",
+		"/home/cesar/sedeco/protected/views/site/page44.php",
+		"/home/cesar/sedeco/protected/views/site/page67.php",
+		"/home/cesar/sedeco/protected/views/site/page72.php",
+		"/home/cesar/sedeco/protected/views/site/page87.php",
+		"/home/cesar/sedeco/protected/views/site/page107.php",
+		"/home/cesar/sedeco/protected/views/site/page97.php",
+		"/home/cesar/sedeco/protected/views/site/page110.php",
+		"/home/cesar/sedeco/protected/views/site/page155.php",
+		"/home/cesar/sedeco/protected/views/site/page167.php",
+		"/home/cesar/sedeco/protected/views/site/page166.php",
+		"/home/cesar/sedeco/protected/views/site/page187.php",
+		"/home/cesar/sedeco/protected/views/site/page168.php",
+		"/home/cesar/sedeco/protected/views/site/page210.php",
+		"/home/cesar/sedeco/protected/views/site/page188.php",
+		"/home/cesar/sedeco/protected/views/site/page192.php",
+		"/home/cesar/sedeco/protected/views/site/page135.php",
+		"/home/cesar/sedeco/protected/views/site/page14.php",
+		"/home/cesar/sedeco/protected/views/site/page11.php",
+		"/home/cesar/sedeco/protected/views/site/page31.php",
+		"/home/cesar/sedeco/protected/views/site/page24.php",
+		"/home/cesar/sedeco/protected/views/site/page21.php",
+		"/home/cesar/sedeco/protected/views/site/page37.php",
+		"/var/www/html/sigedoalfa/protected/views/main/index.php",
+		"/var/www/html/sigedoalfa/protected/controllers/ApipdfController.php",
+		"/var/www/html/sigedoalfa/protected/views/main/_permisos.php",
+		"/var/www/html/sigedoalfa/protected/views/documentos/_form.php",
+		"/var/www/html/spdgm/protected/models/Pagos.php",
+		"/var/www/html/sigedoalfa/css/my-custom-styles.css",
+		"/var/www/html/salaneza/index.html",
+		"/var/www/html/slideshow/index.html",
+		"/var/www/html/spdgm/protected/views/informesf/_params.php",
+		"/var/www/html/salaneza/styles/main.css",
+		"/var/www/html/sigedoalfa/js/king-chart-stat.js",
+		"/var/www/html/sigedoalfa/protected/controllers/MainController.php",
+		"/var/www/html/sigedoalfa/protected/models/Areas.php",
+		"/var/www/html/sigedoalfa/protected/views/layouts/main.php",
+		"/var/www/html/sigedoalfa/protected/components/UserIdentity.php",
+		"/media/cesar/TOSHIBA EXT/Videotutoriales/Javascript/Javascipt/DtCr8RespFlexSlideshowJS_softarchive.net.part1/Creating a Responsive and Flexible Slideshow in JavaScript/Lesson_15_begin/slideshow/config.rb",
+		"/media/cesar/TOSHIBA EXT/Videotutoriales/Javascript/Javascipt/DtCr8RespFlexSlideshowJS_softarchive.net.part1/Creating a Responsive and Flexible Slideshow in JavaScript/Lesson_15_begin/slideshow/index.html",
+		"/media/cesar/TOSHIBA EXT/Videotutoriales/Javascript/Javascipt/DtCr8RespFlexSlideshowJS_softarchive.net.part1/Creating a Responsive and Flexible Slideshow in JavaScript/references.txt",
+		"/home/cesar/.cache/.fr-IX3Tja/5/5_electores_Basicos_de_jQuery.html",
+		"/var/www/html/sigedoalfa/protected/controllers/ApiController.php",
+		"/var/www/html/sigedo/protected/views/correspondencia/confirmar.php",
+		"/var/www/html/sigedoalfa/protected/views/directorio/admin.php",
+		"/var/www/html/sigedoalfa/protected/views/usuarios/admin.php"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -277,25 +554,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"756",
-			"					<i class=\"fa fa-usd\"></i>756",
-			"<i class=\"fa fa-usd\"></i>",
-			"LoadAjaxContent",
-			"auth",
-			"endif",
-			"sindicato",
-			"inicio",
-			"el id",
-			"echo",
-			"acuse",
-			"acusef",
+			"_GET",
+			"function existe(){\n		$sql=\"select count(id_corresp) from correspondencia \n		where id_documento=\".$this->id_documento.\" \n		and cor_dest=\".$this->cor_dest;\n		\n		//echo $sql.\"<br>\";		\n		\n		$this->condb->SetFetchMode(ADODB_FETCH_NUM);		\n		$numDoc=&$this->condb->GetRow($sql);\n		$this->condb->SetFetchMode(ADODB_FETCH_ASSOC);				 \n	\n		if($numDoc[0]!=0){\n			return true;	\n		}else{\n			return false;		\n		}\n\n	}",
+			"ap3Ind12",
+			"ap2Ind2",
+			"dd_ref",
+			"anio",
+			"=$anio",
+			"$anio",
+			"ap2Ind2",
+			"tabla_ap1Ind71",
+			"meses",
 			"ap1Ind72",
-			"titulo",
-			"performAjaxValidation",
-			"ASCII",
-			"SQL_ASCII",
-			"public function getImagen(){\n\n	//	$imagen=\"validado.png\";\n		if($this->estado_acuse=='1'){\n		$imagen=\"<div class=\\\"label label-success\\\"><i class=\\\"fa fa-check-circle\\\"></i> CONFIRMADO</button></div>\";\n		}\n	    if($this->estado_acuse=='0'){\n		$imagen=\"<div class=\\\"label label-danger\\\"><i class=\\\"fa fa-danger\\\"></i> SIN CONFIRMAR</div>\";	\n		}\n\n\n		return $imagen;\n\n		}",
-			"correspondencia"
+			"ap1Ind4c",
+			"ap1Ind1",
+			"tabla_ap8Ind3",
+			"ap9Ind1",
+			"ap8Ind12",
+			" <h3>$titulos[titulo2]</h3>\n                ",
+			"\n                ",
+			"                <h3>$titulos[titulo2]</h3>\n",
+			"<h3>$titulos[titulo2]</h3>",
+			"ap8Ind11",
+			"ap7Ind3",
+			"ap7Ind2",
+			"ap7Ind11",
+			"tabla_ap3Ind11",
+			"round_up",
+			"ap1Ind10",
+			"ap3Ind11",
+			"ap1Ind4b",
+			"tabla_ap1Ind61",
+			"tabla_ap1Ind4b",
+			"ap1Ind4b",
+			"tabla_ap1Ind4b",
+			"background",
+			"assets",
+			"logo",
+			"container",
+			"img",
+			"entradas",
+			"ENTRADA",
+			"referencoa",
+			"documento",
+			"correspondencia",
+			"Correspondencia",
+			"fa fa-chevron-up",
+			"visit-stat-table",
+			"estado",
+			"id",
+			"home",
+			"1444",
+			"bootstrapSwitch",
+			"tituloHeader",
+			"colcdmxHeader",
+			"text-left",
+			"fa-clipboard",
+			"fa fa-clipboard fa-fw",
+			"100",
+			"50",
+			"th",
+			"proveedor",
+			"localhost",
+			"132.248.152.124",
+			"postgres",
+			"root",
+			"2020root",
+			"kylix",
+			"folio",
+			"openid_identifier",
+			"@iems.edu.mx",
+			"back",
+			"code",
+			"YOUR_CLIENT_ID",
+			"bancos",
+			"Conceptos",
+			"conceptos",
+			"0.9",
+			"update",
+			"	\n",
+			"remitentes",
+			"Okay",
+			"rem",
+			"estado",
+			"remitentes",
+			"pregunta_opcion_add",
+			"11px",
+			"h1",
+			"tituloHeader",
+			"coltituloHeader",
+			"instruccion_adicional",
+			"fecha_plazo",
+			"rem",
+			"30px",
+			"fecha_solucuion",
+			"caracter",
+			"fecha_ingreso",
+			"instruccion2",
+			"instruccion1",
+			"destinatario",
+			"subprog",
+			"asunto",
+			"20px",
+			"id_periodo",
+			"banderas",
+			"bandera",
+			"BaseCap",
+			"page_size",
+			"remitentes",
+			"baseUrl2",
+			"rigth",
+			"584",
+			"remitente",
+			"correspondencia_form",
+			"query",
+			"\"Search\"",
+			"Search",
+			"anios_ini",
+			"getPerfil",
+			"EE8026",
+			"nav",
+			"th",
+			"center",
+			"Right",
+			"rigth",
+			"center",
+			"$row->nombre",
+			"td",
+			"Existencias"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -313,251 +699,18 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "protected/views/main/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 23282,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3467,
-								3467
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 8316.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "protected/views/layouts/main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15959,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5083,
-								5083
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2838.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "protected/views/sesiones/create.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1234,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1183,
-								1183
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 594.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "protected/views/sesiones/admin.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1420,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1153,
-								1153
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 645.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "protected/models/Sesiones.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4388,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2682,
-								2682
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1497.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "protected/views/sesiones/_form.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14240,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7296,
-								7296
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3213.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "protected/models/CatTurno.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1977,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								201,
-								201
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "protected/controllers/SesionesController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7087,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4778,
-								4778
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2640.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 21.0
 	},
 	"input":
 	{
-		"height": 38.0
+		"height": 49.0
 	},
 	"layout":
 	{
@@ -586,11 +739,15 @@
 	{
 		"height": 0.0
 	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
 	"pinned_build_system": "",
 	"project": "silac.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -599,25 +756,29 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"style.cs",
+				"sigedo/yii/framework/zii/widgets/assets/detailview/styles.css"
+			],
+			[
+				"table",
+				"sigedo/themes/abound/less/tables.less"
+			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 1028.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"",
-				"/var/www/html/sigedo/sigedo.sublime-project"
-			],
-			[
-				"si",
-				"/var/www/html/sigedo/sigedo.sublime-project"
+				"/var/www/html/spdgm/protected/controllers/sigedo.sublime-project"
 			]
 		],
-		"width": 1863.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -633,10 +794,10 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 268.0,
+	"side_bar_width": 269.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -115,7 +115,7 @@
 									<li>
 										<a href="<?php echo CController::createUrl('site/logout'); ?>">
 											<i class="fa fa-power-off"></i>
-											<span>Logout</span>
+											<span>Salir</span>
 										</a>
 									</li>
 								</ul>
