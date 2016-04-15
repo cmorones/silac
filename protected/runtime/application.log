@@ -11783,3 +11783,47 @@ Stack trace:
 REQUEST_URI=/silac/index.php/main/plugins/jQuery-Knob/jquery.knob.js?_=1460650564560
 HTTP_REFERER=http://localhost/silac/index.php/main/index
 ---
+2016/04/14 13:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/yii-1.1.13.e9e4a0/framework/web/CController.php:483
+Stack trace:
+#0 /opt/yii-1.1.13.e9e4a0/framework/web/CController.php(270): CController->missingAction('plugins')
+#1 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('plugins')
+#2 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('main/plugins/jQ...')
+#3 /opt/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/silac/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/silac/index.php/main/plugins/jQuery-Knob/jquery.knob.js?_=1460659208409
+HTTP_REFERER=http://localhost/silac/index.php/main/index
+---
+2016/04/14 13:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/yii-1.1.13.e9e4a0/framework/web/CController.php:483
+Stack trace:
+#0 /opt/yii-1.1.13.e9e4a0/framework/web/CController.php(270): CController->missingAction('plugins')
+#1 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('plugins')
+#2 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('main/plugins/ra...')
+#3 /opt/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/silac/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/silac/index.php/main/plugins/raphael/raphael-min.js?_=1460659208411
+HTTP_REFERER=http://localhost/silac/index.php/main/index
+---
+2016/04/14 13:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/yii-1.1.13.e9e4a0/framework/web/CController.php:483
+Stack trace:
+#0 /opt/yii-1.1.13.e9e4a0/framework/web/CController.php(270): CController->missingAction('plugins')
+#1 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('plugins')
+#2 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('main/plugins/sp...')
+#3 /opt/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/silac/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/silac/index.php/main/plugins/sparkline/jquery.sparkline.min.js?_=1460659208410
+HTTP_REFERER=http://localhost/silac/index.php/main/index
+---
+2016/04/14 13:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "plugins".' in /opt/yii-1.1.13.e9e4a0/framework/web/CController.php:483
+Stack trace:
+#0 /opt/yii-1.1.13.e9e4a0/framework/web/CController.php(270): CController->missingAction('plugins')
+#1 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(282): CController->run('plugins')
+#2 /opt/yii-1.1.13.e9e4a0/framework/web/CWebApplication.php(141): CWebApplication->runController('main/plugins/sp...')
+#3 /opt/yii-1.1.13.e9e4a0/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/silac/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/silac/index.php/main/plugins/springy/springy.js?_=1460659208412
+HTTP_REFERER=http://localhost/silac/index.php/main/index
+---
