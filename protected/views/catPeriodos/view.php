@@ -22,7 +22,9 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'secuencia',
+		'id_year',
 		'nombre',
+		'secuencia',
+		'status',
 	),
 )); ?>

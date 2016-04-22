@@ -21,6 +21,18 @@ class SiteController extends Controller
 		);
 	}
 
+	public function actionMostrar()
+	{
+		
+		$criteria = new CDbCriteria();
+		$criteria->order ="id desc";
+        
+		$model= Sessiones::model()->findAll($criteria);
+
+		$this->render('mostrar',array(
+			'model'=>$model,
+		));
+	}
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.

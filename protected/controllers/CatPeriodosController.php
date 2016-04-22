@@ -122,9 +122,14 @@ class CatPeriodosController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('CatPeriodos');
+		
+		$criteria = new CDbCriteria();
+		$criteria->order ="id desc";
+        
+		$model= CatPeriodos::model()->findAll($criteria);
+
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

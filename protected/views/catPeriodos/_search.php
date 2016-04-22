@@ -17,13 +17,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'secuencia'); ?>
-		<?php echo $form->textField($model,'secuencia'); ?>
+		<?php echo $form->label($model,'id_year'); ?>
+		<?php echo $form->textField($model,'id_year'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'secuencia'); ?>
+		<?php echo $form->textField($model,'secuencia'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'status'); ?>
+		<?php echo $form->textField($model,'status'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -145,9 +145,21 @@
 						 <span class="hidden-xs">Solicitudes Docente</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Apartar Sesiones</a></li>
-						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Registrar Materiales</a></li>
-						<li><a href="<?php echo CController::createUrl('sesiones/admin'); ?>">Registrar Reactivos</a></li>
+						<li><a href="<?php echo CController::createUrl('catPeriodos/index'); ?>">Apartar Sesiones</a></li>
+						<li><a href="<?php echo CController::createUrl('sesiones/mostrar'); ?>">Mostrar Sesiones</a></li>
+					
+						
+						
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-table"></i>
+						 <span class="hidden-xs">Sesiones Laboratorista</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo CController::createUrl('sesiones/validar'); ?>">Validar Sesiones</a></li>
+						<li><a href="<?php echo CController::createUrl('sesiones/cierre'); ?>">Cerrar Sesiones</a></li>
 						
 						
 						
@@ -156,25 +168,11 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-table"></i>
-						 <span class="hidden-xs">Sesiones</span>
+						 <span class="hidden-xs">Salidas Inventario</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Registrar Sesiones</a></li>
-						<li><a href="<?php echo CController::createUrl('sesiones/create'); ?>">Registrar Accidentes</a></li>
-						<li><a href="<?php echo CController::createUrl('sesiones/admin'); ?>">Consulta Sesiones</a></li>
-						
-						
-						
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-table"></i>
-						 <span class="hidden-xs">Consumo</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="<?php echo CController::createUrl('invmat/admin'); ?>">Consumo de Materiales</a></li>
-						<li><a href="<?php echo CController::createUrl('invReact/admin'); ?>">Consumo de Reactivos</a></li>
+						<li><a href="<?php echo CController::createUrl('invmat/admin'); ?>">Salidas Inventario de Materiales</a></li>
+						<li><a href="<?php echo CController::createUrl('invReact/admin'); ?>">Salidas Inventario de Reactivos</a></li>
 						
 					</ul>
 				</li>
