@@ -1,18 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "cat_categoria_mat".
+ * This is the model class for table "cat_tipo".
  *
- * The followings are the available columns in table 'cat_categoria_mat':
+ * The followings are the available columns in table 'cat_tipo':
  * @property integer $id
  * @property string $nombre
  */
-class CatCatMat extends CActiveRecord
+class CatTipo extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return CatCatMat the static model class
+	 * @return CatTipo the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -24,7 +24,7 @@ class CatCatMat extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'cat_categoria_mat';
+		return 'cat_tipo';
 	}
 
 	/**

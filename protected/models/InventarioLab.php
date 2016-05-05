@@ -1,18 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "cat_categoria_mat".
+ * This is the model class for table "invetario_lab".
  *
- * The followings are the available columns in table 'cat_categoria_mat':
+ * The followings are the available columns in table 'invetario_lab':
  * @property integer $id
- * @property string $nombre
+ * @property integer $id_catmat
+ * @property integer $id_plantel
+ * @property double $entrada
+ * @property integer $user_reg
+ * @property integer $user_mod
+ * @property string $fecha_reg
+ * @property string $fecha_mod
  */
-class CatCatMat extends CActiveRecord
+class InventarioLab extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return CatCatMat the static model class
+	 * @return InventarioLab the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -24,7 +30,7 @@ class CatCatMat extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'cat_categoria_mat';
+		return 'invetario_lab';
 	}
 
 	/**
@@ -35,10 +41,12 @@ class CatCatMat extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre', 'length', 'max'=>30),
+			array('id_catmat, id_plantel, user_reg, user_mod', 'numerical', 'integerOnly'=>true),
+			array('entrada', 'numerical'),
+			array('fecha_reg, fecha_mod', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nombre', 'safe', 'on'=>'search'),
+			array('id, id_catmat, id_plantel, entrada, user_reg, user_mod, fecha_reg, fecha_mod', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,7 +68,13 @@ class CatCatMat extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nombre' => 'Nombre',
+			'id_catmat' => 'Seleccionar Material y/o Reactivo:',
+			'id_plantel' => 'Plantel:',
+			'entrada' => 'Cantidad:',
+			'user_reg' => 'User Reg',
+			'user_mod' => 'User Mod',
+			'fecha_reg' => 'Fecha Reg',
+			'fecha_mod' => 'Fecha Mod',
 		);
 	}
 
@@ -76,15 +90,16 @@ class CatCatMat extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('id_catmat',$this->id_catmat);
+		$criteria->compare('id_plantel',$this->id_plantel);
+		$criteria->compare('entrada',$this->entrada);
+		$criteria->compare('user_reg',$this->user_reg);
+		$criteria->compare('user_mod',$this->user_mod);
+		$criteria->compare('fecha_reg',$this->fecha_reg,true);
+		$criteria->compare('fecha_mod',$this->fecha_mod,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
-	public function getOptions()
-		{
-		return CHtml::listData($this->findAll(),'id','nombre');
-		}
 }

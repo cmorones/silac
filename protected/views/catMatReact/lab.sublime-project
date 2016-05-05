@@ -188,6 +188,12 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"folders":
+	[
+		{
+			"path": "/var/www/html/silac"
+		}
+	],
 	"groups":
 	[
 		{
@@ -213,8 +219,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 365.0,
@@ -275,7 +280,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 660.0,
+						"translation.y": 858.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -372,7 +377,7 @@
 		[
 			[
 				"",
-				"/var/www/html/silac/silac.sublime-project"
+				"/var/www/html/MyShop/myshop.sublime-project"
 			]
 		],
 		"width": 380.0

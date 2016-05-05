@@ -20,7 +20,7 @@
         error_reporting(0);
         $baseUrl = Yii::app()->request->baseUrl; 
         $cs = Yii::app()->getClientScript();
-        //Yii::app()->clientScript->registerCoreScript('jquery');
+        Yii::app()->clientScript->registerCoreScript('jquery');
         $cs->registerCssFile($baseUrl.'/plugins/bootstrap/bootstrap.css');
         $cs->registerCssFile($baseUrl.'/plugins/jquery-ui/jquery-ui.min.css');
         $cs->registerCssFile($baseUrl.'/plugins/jquery-ui/jquery-ui.min.css');
@@ -182,8 +182,7 @@
 						 <span class="hidden-xs">Inventario</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="<?php echo CController::createUrl('invmat/admin'); ?>">Inventario de Materiales</a></li>
-						<li><a href="<?php echo CController::createUrl('invReact/admin'); ?>">Inventario de Reactivos</a></li>
+						<li><a href="<?php echo CController::createUrl('inventarioLab/admin'); ?>">Inventario Total</a></li>
 						
 					</ul>
 				</li>
@@ -194,8 +193,8 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo CController::createUrl('catPlanteles/admin'); ?>">Catalogo de Planteles</a></li>
-						<li><a href="<?php echo CController::createUrl('catMat/admin'); ?>">Catalogo de Materiales</a></li>
-						<li><a href="<?php echo CController::createUrl('catReact/admin'); ?>">Catalogo de Reactivos</a></li>
+						<li><a href="<?php echo CController::createUrl('catMatReact/admin'); ?>">Catalogos de Materiales</a></li>
+						<li><a href="<?php echo CController::createUrl('catMatReact/admin'); ?>">Catalogo de Reactivos</a></li>
 						<li><a href="<?php echo CController::createUrl('catCatMat/admin'); ?>">Categorias Materiales</a></li>
 						<li><a href="<?php echo CController::createUrl('catMedida/admin'); ?>">Unidades de Medida</a></li>
 						
@@ -395,17 +394,17 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 <?php
-$cs->registerScriptFile($baseUrl.'/plugins/jquery/jquery.min.js');
+//$cs->registerScriptFile($baseUrl.'/plugins/jquery/jquery.min.js');
 $cs->registerScriptFile($baseUrl.'/plugins/jquery-ui/jquery-ui.min.js');
 $cs->registerScriptFile($baseUrl.'/plugins/bootstrap/bootstrap.min.js');
-$cs->registerScriptFile($baseUrl.'/plugins/justified-gallery/jquery.justifiedGallery.min.js');
-$cs->registerScriptFile($baseUrl.'/plugins/tinymce/tinymce.min.js');
-$cs->registerScriptFile($baseUrl.'/plugins/xcharts/xcharts.js');
+//$cs->registerScriptFile($baseUrl.'/plugins/justified-gallery/jquery.justifiedGallery.min.js');
+//$cs->registerScriptFile($baseUrl.'/plugins/tinymce/tinymce.min.js');
+//$cs->registerScriptFile($baseUrl.'/plugins/xcharts/xcharts.js');
 $cs->registerScriptFile($baseUrl.'/js/devoops.js');
-$cs->registerScriptFile($baseUrl.'/js/lib/moment.min.js');
-$cs->registerScriptFile($baseUrl.'/js/lib/jquery.min.js');
-$cs->registerScriptFile($baseUrl.'/js/fullcalendar.min.js');
- $cs->registerScriptFile($baseUrl.'/js/lang/es.js');
+//$cs->registerScriptFile($baseUrl.'/js/lib/moment.min.js');
+//$cs->registerScriptFile($baseUrl.'/js/lib/jquery.min.js');
+//$cs->registerScriptFile($baseUrl.'/js/fullcalendar.min.js');
+//$cs->registerScriptFile($baseUrl.'/js/lang/es.js');
 
 ?>
 </body>
