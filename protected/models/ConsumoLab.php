@@ -1,24 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "invetario_lab".
+ * This is the model class for table "consumo_lab".
  *
- * The followings are the available columns in table 'invetario_lab':
+ * The followings are the available columns in table 'consumo_lab':
  * @property integer $id
- * @property integer $id_catmat
+ * @property integer $id_material
  * @property integer $id_plantel
- * @property double $entrada
- * @property integer $user_reg
- * @property integer $user_mod
+ * @property integer $id_sesion
+ * @property integer $id_materia
+ * @property double $cantidad
+ * @property integer $estado
  * @property string $fecha_reg
  * @property string $fecha_mod
+ * @property integer $user_reg
+ * @property integer $user_mod
  */
-class InventarioLab extends CActiveRecord
+class ConsumoLab extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return InventarioLab the static model class
+	 * @return ConsumoLab the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +33,7 @@ class InventarioLab extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'invetario_lab';
+		return 'consumo_lab';
 	}
 
 	/**
@@ -41,12 +44,12 @@ class InventarioLab extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_catmat, id_plantel, user_reg, user_mod', 'numerical', 'integerOnly'=>true),
-			array('entrada', 'numerical'),
+			array('id_material, id_plantel, id_sesion, id_materia, estado, user_reg, user_mod', 'numerical', 'integerOnly'=>true),
+			array('cantidad', 'numerical'),
 			array('fecha_reg, fecha_mod', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_catmat, id_plantel, entrada, user_reg, user_mod, fecha_reg, fecha_mod', 'safe', 'on'=>'search'),
+			array('id, id_material, id_plantel, id_sesion, id_materia, cantidad, estado, fecha_reg, fecha_mod, user_reg, user_mod', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,13 +71,16 @@ class InventarioLab extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'id_catmat' => 'Seleccionar Material y/o Reactivo:',
-			'id_plantel' => 'Plantel:',
-			'entrada' => 'Cantidad:',
-			'user_reg' => 'User Reg',
-			'user_mod' => 'User Mod',
+			'id_material' => 'Id Material',
+			'id_plantel' => 'Id Plantel',
+			'id_sesion' => 'Id Sesion',
+			'id_materia' => 'Id Materia',
+			'cantidad' => 'Cantidad',
+			'estado' => 'Estado',
 			'fecha_reg' => 'Fecha Reg',
 			'fecha_mod' => 'Fecha Mod',
+			'user_reg' => 'User Reg',
+			'user_mod' => 'User Mod',
 		);
 	}
 
@@ -90,13 +96,16 @@ class InventarioLab extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('id_catmat',$this->id_catmat);
+		$criteria->compare('id_material',$this->id_material);
 		$criteria->compare('id_plantel',$this->id_plantel);
-		$criteria->compare('entrada',$this->entrada);
-		$criteria->compare('user_reg',$this->user_reg);
-		$criteria->compare('user_mod',$this->user_mod);
+		$criteria->compare('id_sesion',$this->id_sesion);
+		$criteria->compare('id_materia',$this->id_materia);
+		$criteria->compare('cantidad',$this->cantidad);
+		$criteria->compare('estado',$this->estado);
 		$criteria->compare('fecha_reg',$this->fecha_reg,true);
 		$criteria->compare('fecha_mod',$this->fecha_mod,true);
+		$criteria->compare('user_reg',$this->user_reg);
+		$criteria->compare('user_mod',$this->user_mod);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

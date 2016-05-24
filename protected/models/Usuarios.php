@@ -1,18 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "cat_tipo_mat".
+ * This is the model class for table "usuarios".
  *
- * The followings are the available columns in table 'cat_tipo_mat':
+ * The followings are the available columns in table 'usuarios':
  * @property integer $id
  * @property string $nombre
+ * @property string $email
+ * @property integer $perfil
+ * @property string $username
+ * @property string $password
+ * @property string $session
+ * @property integer $status
  */
-class CatTipoMat extends CActiveRecord
+class Usuarios extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return CatTipoMat the static model class
+	 * @return Usuarios the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -24,7 +30,7 @@ class CatTipoMat extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'cat_tipo_mat';
+		return 'usuarios';
 	}
 
 	/**
@@ -35,10 +41,11 @@ class CatTipoMat extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre', 'length', 'max'=>30),
+			array('perfil, status', 'numerical', 'integerOnly'=>true),
+			array('nombre, email, username, password, session', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nombre', 'safe', 'on'=>'search'),
+			array('id, nombre, email, perfil, username, password, session, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,8 +68,30 @@ class CatTipoMat extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
+			'email' => 'Email',
+			'perfil' => 'Perfil',
+			'username' => 'Username',
+			'password' => 'Password',
+			'session' => 'Session',
+			'status' => 'Status',
 		);
 	}
+
+	public function validatePassword($password)
+	{
+		return $this->hashPassword($password,$this->session)===$this->password;
+	}
+
+	public function hashPassword($password,$salt)
+	{
+		return md5($salt.$password);
+	}
+
+	public function generateSalt()
+	{
+		return uniqid('',true);
+	}
+
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
@@ -77,14 +106,15 @@ class CatTipoMat extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('perfil',$this->perfil);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('session',$this->session,true);
+		$criteria->compare('status',$this->status);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
-	public function getOptions()
-		{
-		return CHtml::listData($this->findAll(),'id','nombre');
-		}
 }

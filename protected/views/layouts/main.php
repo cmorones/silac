@@ -131,7 +131,14 @@
 <!--Start Container-->
 <div id="main" class="container-fluid">
 	<div class="row">
-		<div id="sidebar-left" class="col-xs-2 col-sm-2">
+<?php
+if (!Yii::app()->user->isGuest) {
+$perfil = Yii::app()->user->perfil;
+
+if($perfil==1){
+
+?>
+	<div id="sidebar-left" class="col-xs-2 col-sm-2">
 			<ul class="nav main-menu">
 				<li>
 					<a href="<?php echo CController::createUrl('main/index'); ?>" >
@@ -386,7 +393,48 @@
 			</ul>
 		</div>
 		<!--Start Content-->
-		<?php echo $content; ?> 
+		<?php 
+		}elseif ($perfil==2) {  ?>
+
+<div id="sidebar-left" class="col-xs-2 col-sm-2">
+			<ul class="nav main-menu">
+				<li>
+					<a href="<?php echo CController::createUrl('main/index'); ?>" >
+						<i class="fa fa-dashboard"></i>
+						<span class="hidden-xs">Dashboard</span>
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">
+						<i class="fa fa-table"></i>
+						 <span class="hidden-xs">Solicitudes Docente</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="<?php echo CController::createUrl('catPeriodos/index'); ?>">Apartar Sesiones</a></li>
+						<li><a href="<?php echo CController::createUrl('sesiones/mostrar'); ?>">Mostrar Sesiones</a></li>
+					
+						
+						
+					</ul>
+				</li>
+			
+			
+				 
+
+			</ul>
+		</div>
+		<!--Start Content-->
+			
+		<?php
+		}
+
+		}else {
+  			$this->redirect(Yii::app()->homeUrl);
+		}
+	
+
+
+		echo $content; ?> 
 		<!--End Content-->
 	</div>
 </div>

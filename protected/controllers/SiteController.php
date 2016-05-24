@@ -37,6 +37,7 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
+	
 			public function actionIndex()
 	{
 		// renders the view file 'protected/views/site/index.php'
@@ -64,6 +65,7 @@ class SiteController extends Controller
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
+
 
 		public function actionMain()
 	{

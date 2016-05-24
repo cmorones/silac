@@ -46,7 +46,7 @@
   <th>Hora inicial</th>
   <th>Hora final</th>
   <th>Accion</th>
-  <th>Accion</th>
+ 
   <th>Estado</th>
   </tr>
 
@@ -66,9 +66,9 @@ echo "<td>$item->id_lab</td>";
 echo "<td>$item->id_profesor</td>";
 echo "<td>$item->hora_ini</td>";
 echo "<td>$item->hora_fin</td>";
-echo "<td>" .CHtml::link('Agregar Material',array('sesiones/create/'.$item->id),array('class'=>'btn btn-success btn-sm')) . "</td>";
-echo "<td>" .CHtml::link('Agregar Insumos',array('sesiones/create/'.$item->id),array('class'=>'btn btn-info btn-sm')) . "</td>";
-echo "<td>$item->status (PENDIENTE,AUTORIZADO)</td>";
+echo "<td>" .CHtml::link('Mostrar Material y/o Insumos',array('consumoLab/admin/'.$item->id),array('class'=>'btn btn-success btn-sm')) . "</td>";
+//echo "<td>" .CHtml::link('Agregar Insumos',array('sesiones/create/'.$item->id),array('class'=>'btn btn-info btn-sm')) . "</td>";
+echo "<td>$item->status (PENDIENTE,EN EJECUCIÓN, AUTORIZADO)</td>";
 echo "</tr>";
 $contador++;
 }

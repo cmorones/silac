@@ -17,7 +17,7 @@
 			<div class="box-header">
 				<div class="box-name">
 					<i class="fa fa-search"></i>
-					<span>Formato</span>
+					<span>Listado de Horarios</span>
 				</div>
 				<div class="box-icons">
 					<a class="collapse-link">
@@ -33,18 +33,34 @@
 				<div class="no-move"></div>
 			</div>
 			<div class="box-content">
+			<?php
+					echo CHtml::link('Agregar Material y/o Reactivo',array('consumoLab/create/'),array('class'=>'btn btn-info btn-sm'));
+			
+		 $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'consumo-lab-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'id',
+		'id_material',
+		'id_plantel',
+		'id_sesion',
+		'id_materia',
+		'cantidad',
+		/*
+		'estado',
+		'fecha_reg',
+		'fecha_mod',
+		'user_reg',
+		'user_mod',
+		*/
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
+)); ?>
 
-				<h4 class="page-header">Catalogo de Materiales</h4>
-				
-<?php echo $this->renderPartial('_form', array(
-					'model'=>$model,
-					'cat'=>$cat,
-					'tipo'=>$tipo,
-					'status'=>$status,
-					'med'=>$med,
-					'tipoMat'=>$tipoMat,
 
-				)); ?>
 				
 			</div>
 		</div>

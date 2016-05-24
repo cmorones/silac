@@ -1,6 +1,6 @@
 <?php
-/* @var $this InventarioLabController */
-/* @var $model InventarioLab */
+/* @var $this ConsumoLabController */
+/* @var $model ConsumoLab */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,8 +17,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_catmat'); ?>
-		<?php echo $form->textField($model,'id_catmat'); ?>
+		<?php echo $form->label($model,'id_material'); ?>
+		<?php echo $form->textField($model,'id_material'); ?>
 	</div>
 
 	<div class="row">
@@ -27,18 +27,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'entrada'); ?>
-		<?php echo $form->textField($model,'entrada'); ?>
+		<?php echo $form->label($model,'id_sesion'); ?>
+		<?php echo $form->textField($model,'id_sesion'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'user_reg'); ?>
-		<?php echo $form->textField($model,'user_reg'); ?>
+		<?php echo $form->label($model,'id_materia'); ?>
+		<?php echo $form->textField($model,'id_materia'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'user_mod'); ?>
-		<?php echo $form->textField($model,'user_mod'); ?>
+		<?php echo $form->label($model,'cantidad'); ?>
+		<?php echo $form->textField($model,'cantidad'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'estado'); ?>
+		<?php echo $form->textField($model,'estado'); ?>
 	</div>
 
 	<div class="row">
@@ -49,6 +54,16 @@
 	<div class="row">
 		<?php echo $form->label($model,'fecha_mod'); ?>
 		<?php echo $form->textField($model,'fecha_mod'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'user_reg'); ?>
+		<?php echo $form->textField($model,'user_reg'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'user_mod'); ?>
+		<?php echo $form->textField($model,'user_mod'); ?>
 	</div>
 
 	<div class="row buttons">

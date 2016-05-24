@@ -28,7 +28,7 @@ class SesionesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','mostrar', 'validar', 'cierre'),
+				'actions'=>array('index','view','mostrar', 'validar', 'cierre','cart'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -46,6 +46,19 @@ class SesionesController extends Controller
 	}
 
 	public function actionCierre()
+	{
+		
+		$criteria = new CDbCriteria();
+		$criteria->order ="id desc";
+        
+		$model= Sesiones::model()->findAll($criteria);
+
+		$this->render('cierre',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionCart()
 	{
 		
 		$criteria = new CDbCriteria();

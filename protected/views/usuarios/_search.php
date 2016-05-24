@@ -1,6 +1,6 @@
 <?php
-/* @var $this CatMatReactController */
-/* @var $model CatMatReact */
+/* @var $this UsuariosController */
+/* @var $model Usuarios */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,28 +17,28 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'categoria'); ?>
-		<?php echo $form->textField($model,'categoria'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'tipo'); ?>
-		<?php echo $form->textField($model,'tipo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'clave'); ?>
-		<?php echo $form->textField($model,'clave'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'unidad'); ?>
-		<?php echo $form->textField($model,'unidad'); ?>
+		<?php echo $form->label($model,'email'); ?>
+		<?php echo $form->textField($model,'email'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'perfil'); ?>
+		<?php echo $form->textField($model,'perfil'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'username'); ?>
+		<?php echo $form->textField($model,'username'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'session'); ?>
+		<?php echo $form->textField($model,'session'); ?>
 	</div>
 
 	<div class="row">

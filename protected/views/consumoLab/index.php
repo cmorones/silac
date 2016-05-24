@@ -1,18 +1,18 @@
 <?php
-/* @var $this InventarioLabController */
+/* @var $this ConsumoLabController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Inventario Labs',
+	'Consumo Labs',
 );
 
 $this->menu=array(
-	array('label'=>'Create InventarioLab', 'url'=>array('create')),
-	array('label'=>'Manage InventarioLab', 'url'=>array('admin')),
+	array('label'=>'Create ConsumoLab', 'url'=>array('create')),
+	array('label'=>'Manage ConsumoLab', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Inventario Labs</h1>
+<h1>Consumo Labs</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
